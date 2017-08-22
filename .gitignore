@@ -1,0 +1,6 @@
+*.olean
+temp.*
+*.*~
+/_target
+/leanpkg.path
+/backup
