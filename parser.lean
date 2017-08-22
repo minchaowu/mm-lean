@@ -1,3 +1,7 @@
+/-
+Author: Robert Y. Lewis
+-/
+
 open expr string name level binder_info
 
 meta def expand_let : expr → expr

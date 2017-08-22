@@ -1,3 +1,9 @@
+/-
+Copyright (c) 2017 Minchao Wu. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Author: Minchao Wu
+-/
+
 import system.io provers.ljt provers.tableaux parser
 open tactic expr io mathematica name task
 
@@ -24,4 +30,3 @@ get_decl s >>= λ e, write_string $ cond b (form_of_expr e.value) e.value.to_str
 meta def mm_prover : tactic unit := intuit <|> pl_prover
 
 ------------------------------------------------------
-
