@@ -1,15 +1,16 @@
+import mathematica
 open expr tactic classical
 
-namespace list
-variables {α β : Type} 
-universes u v w
+-- namespace list
+-- variables {α β : Type} 
+-- universes u v w
 
-def for : list α → (α → β) → list β := flip map
+-- def for : list α → (α → β) → list β := flip map
 
-def mfor {m : Type u → Type v} [monad m] {α : Type w} {β : Type u} (l : list α) (f : α → m β) : m (list β) :=
-mmap f l
+-- def mfor {m : Type u → Type v} [monad m] {α : Type w} {β : Type u} (l : list α) (f : α → m β) : m (list β) :=
+-- mmap f l
 
-end list
+-- end list
 
 section logical_equivalences
   local attribute [instance] prop_decidable

@@ -4,16 +4,8 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux parser
+import system.io provers.ljt provers.tableaux mathematica
 open tactic expr io mathematica name task
-
-section
-variable [io.interface]
-def write_file (fn : string) (cnts : string) (mode := io.mode.write) : io unit := do
-h ← io.mk_file_handle fn io.mode.write,
-io.fs.write h cnts.to_char_buffer,
-io.fs.close h
-end
 
 meta def peek_type (e : expr) : tactic string :=
 infer_type e >>= λ t, return $ to_string t
@@ -29,4 +21,15 @@ get_decl s >>= λ e, write_string $ cond b (form_of_expr e.value) e.value.to_str
 
 meta def mm_prover : tactic unit := intuit <|> pl_prover
 
-------------------------------------------------------
+meta def mm_output (s : tactic string) : tactic unit := 
+s >>= write_string
+
+meta def prove_mm_fml (mm_fml : string) : tactic string :=
+do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
+   e ← pexpr_of_mmexpr trans_env.empty m >>= to_expr,
+   n ← get_unused_name `h,
+   assert n e >> intros >> mm_prover >> result >>= λ r,
+   match r with
+   | macro _ l := return $ form_of_expr l.head
+   | _ := return "failed"
+   end
