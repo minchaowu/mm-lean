@@ -17,19 +17,17 @@ meta def mm_check : expr → tactic unit :=
 λ e, peek_type e >>= λ s, write_string s
 
 meta def mm_write (s : name) (b := ff) : tactic unit :=
-get_decl s >>= λ e, write_string $ cond b (form_of_expr e.value) e.value.to_string
+get_decl s >>= λ e, write_string $ cond b e.value.to_string (form_of_expr e.value)
 
 meta def mm_prover : tactic unit := intuit <|> pl_prover
 
-meta def mm_output (s : tactic string) : tactic unit := 
-s >>= write_string
-
-meta def prove_mm_fml (mm_fml : string) : tactic string :=
+meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
    e ← pexpr_of_mmexpr trans_env.empty m >>= to_expr,
    n ← get_unused_name `h,
    assert n e >> intros >> mm_prover >> result >>= λ r,
    match r with
-   | macro _ l := return $ form_of_expr l.head
+   | macro _ l := return $ cond b (l.head.to_string) (form_of_expr l.head) 
    | _ := return "failed"
    end
+
