@@ -4,4 +4,4 @@ version = "0.1"
 
 [dependencies]
 mathematica = {git = "https://github.com/minchaowu/mathematica",
-	      rev = "2965f97c4cdaa5a0b090367be48c735f4222486c"}
+	      rev = "f05940fc4de8ea371fab36d0db0aaa73f7e75be5"}
