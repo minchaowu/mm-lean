@@ -21,13 +21,15 @@ get_decl s >>= λ e, write_string $ cond b e.value.to_string (form_of_expr e.val
 
 meta def mm_prover : tactic unit := intuit <|> pl_prover
 
-meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
+meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
-   e ← pexpr_of_mmexpr trans_env.empty m >>= to_expr,
+   pexpr_of_mmexpr trans_env.empty m >>= to_expr
+
+meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
+(do e ← preprocess mm_fml,
    n ← get_unused_name `h,
    assert n e >> intros >> mm_prover >> result >>= λ r,
    match r with
    | macro _ l := return $ cond b (l.head.to_string) (form_of_expr l.head) 
    | _ := return "failed"
-   end
-
+   end) <|> return "failed"
