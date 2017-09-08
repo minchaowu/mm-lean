@@ -74,14 +74,6 @@ meta def type_to_pexpr : sym_trans_pexpr_rule :=
 meta def prop_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"Prop", ```(Prop)⟩
 
-@[sym_to_pexpr]
-meta def true_to_pexpr : sym_trans_pexpr_rule :=
-⟨"True", ```(true)⟩
-
-@[sym_to_pexpr]
-meta def equal_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Equal", ```(eq)⟩
-
 @[app_to_pexpr_keyed]
 meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
 ⟨"ForAllTyped",
