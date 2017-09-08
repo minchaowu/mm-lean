@@ -4,4 +4,4 @@ version = "0.1"
 lean_version = "master"
 
 [dependencies]
-mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "c6f6ddb54a061d5e1fd8854b140bd45c77f4bb7a"}
+mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "c9c5d474ffcbabc3593378d2df90d635a73748f6"}
