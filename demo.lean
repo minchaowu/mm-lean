@@ -90,18 +90,14 @@ meta def equal_to_pexpr : sym_trans_pexpr_rule :=
 meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
 ⟨"ForAllTyped",
 λ env args, match args with
-| [sym x, bd] := 
-  do v ← return $ mk_local_const_placeholder x, 
-     bd' ← pexpr_of_mmexpr (env.insert x v) bd,
-     return $ mk_pi' v bd' 
-| [app (sym "List") l, t, bd] :=
-  do vs ← list.mfor l (sym_to_lcs_using env t),
-     bd' ← pexpr_of_mmexpr (env.insert_list vs) bd,
-     return $ mk_pis (list.map prod.snd vs) bd'
 | [sym x, t, bd] := 
-  do v ← return $ mk_local_const_placeholder x,
-     bd' ← pexpr_of_mmexpr (env.insert x v) (app (sym "Implies") [t,bd]),
-     return $ mk_pi' v bd'
+  do (n, pe) ← sym_to_lcs_using env t (sym x),
+     bd' ← pexpr_of_mmexpr (env.insert n pe) bd,
+     return $ mk_pi' pe bd'
+| [app (sym "List") l, t, bd] :=
+  do vs ← l.mfor (sym_to_lcs_using env t),
+     bd' ← pexpr_of_mmexpr (env.insert_list vs) bd,
+     return $ mk_pis (vs.map prod.snd) bd'
 | _ := failed
 end⟩
 
