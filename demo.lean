@@ -44,6 +44,13 @@ meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
    | _ := return "failed"
    end) <|> return "failed"
 
+meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tactic string :=
+(do trace mm_fml, e ← preprocess mm_fml, trace e,
+    (_, pf) ← solve_aux e tac, infer_type pf >>= trace, pf ← instantiate_mvars pf, trace (form_of_expr pf),
+    return $ if b then form_of_expr pf else pf.to_string) 
+<|> return "failed"
+
+
 ---------------------------------------------------------------------------------
 
 open mmexpr level binder_info
@@ -97,6 +104,4 @@ meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
      return $ mk_pi' v bd'
 | _ := failed
 end⟩
-
-
 

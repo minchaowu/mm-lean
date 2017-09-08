@@ -7,3 +7,5 @@ OutputFormat[h_[args___]] :=
 
 RunLeanTactic[x_, t_String]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" >>= write_string",t,x // OutputFormat]; WriteString[s, "import demo", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];ReadString["temp.txt"]];
 
+ProveUsingLeanTactic[x_, t_String] :=
+                                                                                                                                                         Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd prove_using_tac (`1`) \"`2`\" >>= write_string",t,x // OutputFormat]; WriteString[s, "import demo", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];ReadString["temp.txt"]];
