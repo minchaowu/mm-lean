@@ -7,6 +7,14 @@ Author: Minchao Wu
 import system.io provers.ljt provers.tableaux mathematica
 open tactic expr io mathematica name task
 
+namespace tactic
+meta def solve_fully_aux {α : Type} (ex : expr) (tac : tactic α) : tactic (α × expr) :=
+do (a, e) ← solve_aux ex tac,
+   e' ← instantiate_mvars e,
+   guard $ bnot e'.has_meta_var,
+   return (a, e')
+end tactic
+
 meta def peek_type (e : expr) : tactic string :=
 infer_type e >>= λ t, return $ to_string t
 
@@ -23,32 +31,20 @@ meta def mm_prover : tactic unit := intuit <|> pl_prover
 
 meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
-   trace m,
    pexpr_of_mmexpr trans_env.empty m >>= to_expr
 
-meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
-(do e ← preprocess mm_fml,
-   n ← get_unused_name `h,
-   assert n e >> intros >> mm_prover >> result >>= λ r,
-   match r with
-   | macro _ l := return $ cond b (l.head.to_string) (form_of_expr l.head) 
-   | _ := return "failed"
-   end) <|> return "failed"
-
-meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
-(do e ← preprocess mm_fml,
-   n ← get_unused_name `h,
-   assert n e >> target >>= trace >> intros >> using_smt skip >> result >>= λ r,
-   match r with
-   | macro _ l := return $ cond b (l.head.to_string) (form_of_expr l.head) 
-   | _ := return "failed"
-   end) <|> return "failed"
-
 meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tactic string :=
-(do trace mm_fml, e ← preprocess mm_fml, trace e,
-    (_, pf) ← solve_aux e tac, infer_type pf >>= trace, pf ← instantiate_mvars pf, trace (form_of_expr pf),
+(do e ← preprocess mm_fml,
+    (_, pf) ← tactic.solve_fully_aux e tac, 
     return $ if b then form_of_expr pf else pf.to_string) 
 <|> return "failed"
+
+meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
+prove_using_tac (intros >> mm_prover) mm_fml b
+
+meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
+prove_using_tac (intros >> using_smt skip) mm_fml b
+
 
 
 ---------------------------------------------------------------------------------
