@@ -29,6 +29,14 @@ get_decl s >>= λ e, write_string $ cond b e.value.to_string (form_of_expr e.val
 
 meta def mm_prover : tactic unit := intuit <|> pl_prover
 
+/--
+ Solve goal using mm_prover and unfold listed constants in the resulting proof
+-/
+meta def mm_prover_unfold (to_unfold : list name) : tactic unit :=
+do t ← target,
+   (_, pf) ← tactic.solve_fully_aux t mm_prover,
+   dunfold to_unfold pf >>= apply
+
 meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
    pexpr_of_mmexpr trans_env.empty m >>= to_expr
