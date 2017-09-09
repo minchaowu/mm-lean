@@ -5,7 +5,7 @@ Author: Minchao Wu
 -/
 
 import system.io provers.ljt provers.tableaux mathematica
-open tactic expr io mathematica name task
+open tactic expr io mathematica name task mmexpr
 
 namespace tactic
 meta def solve_fully_aux {α : Type} (ex : expr) (tac : tactic α) : tactic (α × expr) :=
@@ -45,14 +45,7 @@ prove_using_tac (intros >> mm_prover) mm_fml b
 meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
 prove_using_tac (intros >> using_smt skip) mm_fml b
 
-
-
 ---------------------------------------------------------------------------------
-
-open mmexpr level binder_info
-
-meta def mmexpr_to_string : mmexpr → string
-| e := format.to_string $ mmexpr_to_format e
 
 meta def mk_local_const (n : name) (tp : pexpr): expr :=
 local_const n n binder_info.default (pexpr.to_raw_expr tp)
@@ -88,4 +81,3 @@ meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
      return $ mk_pis (vs.map prod.snd) bd'
 | _ := failed
 end⟩
-
