@@ -26,6 +26,8 @@ ExtendContext[ctx_, rl_] := Join[{rl}, ctx]
 
 ImpliesConclusion[Implies[_, b_]] := b
 ImpliesConclusion[Not[a_]] := False
+ImpliesConclusion[Inactive[Implies][_, b_]] := b
+ImpliesConclusion[Inactive[Not][_]] := False
 
 
 
@@ -34,7 +36,7 @@ ProofToGraph[AndIntro[lhs_, rhs_], ctx_] :=
   With[{rlhs = RootNode[plhs], rrhs = RootNode[prhs], nvx = NewVertexName[]}, 
    EdgeAdd[VertexAddWithLabel[GraphUnionWithLabels[plhs, prhs], 
      Labeled[nvx, 
-      Placed[{"\[And]I", And[ProofType[plhs], ProofType[prhs]]}, {Above, 
+      Placed[{"\[And]I", Inactive[And][ProofType[plhs], ProofType[prhs]]}, {Above, 
         Below}]]], {rlhs \[DirectedEdge] nvx, rrhs \[DirectedEdge] nvx}]]]
 
 ProofToGraph[AndElimLeft[pand_], ctx_] :=
@@ -59,7 +61,7 @@ ProofToGraph[OrIntroLeft[trhs_, plhs_], ctx_] :=
    EdgeAdd[
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
-      Placed[{"\[Or]IL", Or[ProofType[prf], trhs]}, {Above, Below}]]], 
+      Placed[{"\[Or]IL", Inactive[Or][ProofType[prf], trhs]}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[OrIntroRight[tlhs_, prhs_], ctx_] :=
@@ -68,7 +70,7 @@ ProofToGraph[OrIntroRight[tlhs_, prhs_], ctx_] :=
    EdgeAdd[
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
-      Placed[{"\[Or]IR", Or[tlhs, ProofType[prf]]}, {Above, Below}]]], 
+      Placed[{"\[Or]IR", Inactive[Or][tlhs, ProofType[prf]]}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[ImpliesElim[pimp_, phyp_], ctx_] :=
@@ -87,7 +89,7 @@ ProofToGraph[ImpliesIntro[hyp_, nm_, pf_], ctx_] :=
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
       Placed[{"\[Implies]I  [" <> ToString[nm] <> "]", 
-        Implies[hyp, ProofType[prf]]}, {Above, Below}]]], 
+        Inactive[Implies][hyp, ProofType[prf]]}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[LocalHyp[nm_, tp_], ctx_] :=
@@ -128,37 +130,37 @@ IsPropProofWithVars[AndElimLeft[pand_], vs_, ctx_] :=
  IsPropProofWithVars[pand, vs, ctx]
 IsPropProofWithVars[AndElimRight[pand_], vs_, ctx_] := 
  IsPropProofWithVars[pand, vs, ctx]
-IsPropProofWithVars[OrIntroRight[_, por_], vs_, ctx_] := 
- IsPropProofWithVars[por, vs, ctx]
-IsPropProofWithVars[OrIntroLeft[_, por_], vs_, ctx_] := 
- IsPropProofWithVars[por, vs, ctx]
+IsPropProofWithVars[OrIntroRight[lhs_, por_], vs_, ctx_] := 
+ IsPropWithVars[lhs,vs] && IsPropProofWithVars[por, vs, ctx]
+IsPropProofWithVars[OrIntroLeft[rhs_, por_], vs_, ctx_] := 
+ IsPropWithVars[rhs,vs] && IsPropProofWithVars[por, vs, ctx]
 IsPropProofWithVars[OrElim[por_, plhs_, prhs_], vs_, ctx_] := 
- IsPropProofWithVars[plhs, vs] && IsPropProofWithVars[prhs, vs, ctx] && 
+ IsPropProofWithVars[plhs, vs, ctx] && IsPropProofWithVars[prhs, vs, ctx] && 
   IsPropProofWithVars[por, vs, ctx]
-IsPropProofWithVars[ImpliesIntro[_, _, prhs_], vs_, ctx_] := 
- IsPropProofWithVars[prhs, vs, ctx]
+IsPropProofWithVars[ImpliesIntro[hyp_, nm_, prhs_], vs_, ctx_] := 
+ IsPropWithVars[hyp,vs] && IsPropProofWithVars[prhs, vs, Append[ctx,nm]]
 IsPropProofWithVars[ImpliesElim[plhs_, prhs_], vs_, ctx_] := 
  IsPropProofWithVars[plhs, vs, ctx] && IsPropProofWithVars[prhs, vs, ctx]
 IsPropProofWithVars[TrueIntro, vs_, ctx_] := True
-IsPropProofWithVars[FalseElim[_, plhs_], vs_, ctx_] := 
- IsPropProofWithVars[plhs, vs, ctx]
+IsPropProofWithVars[FalseElim[tgt_, plhs_], vs_, ctx_] := 
+ IsPropWithVars[tgt, vs] && IsPropProofWithVars[plhs, vs, ctx]
 IsPropProofWithVars[LocalHyp[_, _], vs_, ctx_] := True
-IsPropProofWithVars[t_, vs_, ctx_] := MemberQ[vs, t] || MemberQ[ctx, t]||MatchQ[t,_Symbol]
-IsPropProofWithVars[Inactive[h_][t_], vs_, ctx_] := 
+IsPropProofWithVars[t_, vs_, ctx_] := MemberQ[ctx, t]
+(*IsPropProofWithVars[Inactive[h_][t_], vs_, ctx_] := 
  IsPropProofWithVars[h[t], vs, ctx]
-IsPropProofWithVars[t_, ctx_] := IsPropProofWithVars[t, {}, ctx]
+IsPropProofWithVars[t_, ctx_] := IsPropProofWithVars[t, {}, ctx]*)
 
-IsPropWithVars[And[t1_, t2_], vs_] := 
+IsPropWithVars[Inactive[And][t1_, t2_], vs_] := 
  And[IsPropWithVars[t1, vs], IsPropWithVars[t2, vs]]
-IsPropWithVars[Or[t1_, t2_], vs_] := 
+IsPropWithVars[Inactive[Or][t1_, t2_], vs_] := 
  And[IsPropWithVars[t1, vs], IsPropWithVars[t2, vs]]
-IsPropWithVars[Implies[t1_, t2_], vs_] := 
+IsPropWithVars[Inactive[Implies][t1_, t2_], vs_] := 
  And[IsPropWithVars[t1, vs], IsPropWithVars[t2, vs]]
-IsPropWithVars[Not[t1_], vs_] := IsPropWithVars[t1, vs]
+IsPropWithVars[Inactive[Not][t1_], vs_] := IsPropWithVars[t1, vs]
 IsPropWithVars[True, vs_] := True
 IsPropWithVars[False, vs_] := True
-IsPropWithVars[t_, vs_] := MemberQ[vs, t] || MatchQ[t, _Symbol]
-IsPropWithVars[Inactive[h_][t_], vs_] := IsPropWithVars[h[t], vs]
+IsPropWithVars[t_, vs_] := MemberQ[vs, t] || MatchQ[t,_Symbol]
+(*IsPropWithVars[Inactive[h_][t_], vs_] := IsPropWithVars[h[t], vs]*)
 IsPropWithVars[t_] := IsPropWithVars[t, {}]
 
 
@@ -233,16 +235,9 @@ LeanForm[LeanApp[LeanApp[LeanConst[LeanName["false", "elim"], _], Q_], p_],
 
 LeanForm[LeanConst[LeanName["false"], _], env_] := False
 
-LeanForm[LeanConst[LeanNameMkString["A", LeanNameAnonymous], 
-   LeanLevelListNil], env_] := P
-LeanForm[LeanConst[LeanNameMkString["B", LeanNameAnonymous], 
-   LeanLevelListNil], env_] := Q
-LeanForm[LeanConst[LeanNameMkString["C", LeanNameAnonymous], 
-   LeanLevelListNil], env_] := R
-
 LeanForm[LeanApp[f_, a_], env_] := 
  With[{av = LeanForm[a, env]}, 
-  If[IsPropProofWithVars[Activate[av], env], 
+  If[IsPropProofWithVars[av, {}, env], 
    ImpliesElim[LeanForm[f, env], LeanForm[a, env]],
    Print["isn't prop proof with vars: " <> ToString[Activate[av]]]; 
    LeanForm[f, env][LeanForm[a, env]]]]
@@ -251,7 +246,7 @@ LeanForm[LeanLambda[nm_, bi_, tp_, bd_], v_] :=
  With[{sn = Symbol[StringReplace[StringOfName[nm], "_" -> ""]]},
    If[MemberQ[v, sn], 
      LeanForm[LeanLambda[UnderscoreName[nm], bi, tp, bd], v], 
-     With[{tpf = Activate[LeanForm[tp, v]]},
+     With[{tpf = LeanForm[tp, v]},
     If[IsPropWithVars[tpf],
      ImpliesIntro[tpf, sn, LeanForm[bd, Prepend[v, sn]]], Apply[Function, 
          List[sn, LeanForm[bd, Prepend[v, sn]]]]]]]]
@@ -260,14 +255,16 @@ LeanForm[LeanPi[nm_, bi_, tp_, bd_], v_] :=
  With[{sn = Symbol[StringReplace[StringOfName[nm], "_" -> ""]]},
    If[MemberQ[v, sn], 
      LeanForm[LeanPi[UnderscoreName[nm], bi, tp, bd], v], 
-     With[{tpf = Activate[LeanForm[tp, v]]},
+     With[{tpf = LeanForm[tp, v]},
     If[IsPropWithVars[tpf],
-     Implies[tpf, LeanForm[bd, Prepend[v, sn]]], Apply[ForAll, 
+     Inactive[Implies][tpf, LeanForm[bd, Prepend[v, sn]]], Apply[ForAll, 
          List[sn, LeanForm[bd, Prepend[v, sn]]]]]]]]
 
 FoldApps[f_, {}] := f
 FoldApps[f_, vs_] := FoldApps[f[First[vs]], Rest[vs]]
 
+ProveForDiagram[p_]:=ProveUsingLeanTactic[p, "tactic.intros >> mm_prover_unfold [`imp_of_or_imp_left, `imp_of_or_imp_right,`imp_false_of_not, `uncurry, `id_locked, `absurd]", True]
+
 DiagramOfFormula[p_, vs_] := 
  ProofToGraph[
-  FoldApps[ProveUsingLeanTactic[p, "tactic.intros >> mm_prover_unfold [`imp_of_or_imp_left, `imp_of_or_imp_right,`imp_false_of_not, `uncurry, `id_locked, `absurd]", True] // ToExpression // LeanForm, vs], {}]
+  FoldApps[ProveForDiagram[p] // ToExpression // LeanForm, vs], {}]
