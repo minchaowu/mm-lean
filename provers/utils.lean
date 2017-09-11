@@ -88,7 +88,9 @@ def ljt_lemmas := [`imp_of_or_imp_left,
                    `imp_of_or_imp_right,
                    `uncurry,
                    `imp_false_of_not,
-                   `nested_imp_elim]
+                   `nested_imp_elim,
+                   `id_locked,
+                   `absurd]
 
 /- some generally useful things -/
 
