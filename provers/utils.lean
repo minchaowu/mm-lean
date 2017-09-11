@@ -84,6 +84,12 @@ begin
   apply h₂
 end
 
+def ljt_lemmas := [`imp_of_or_imp_left,
+                   `imp_of_or_imp_right,
+                   `uncurry,
+                   `imp_false_of_not,
+                   `nested_imp_elim]
+
 /- some generally useful things -/
 
 def {u} list.first {α : Type u} (l : list α) (p : α → Prop) [decidable_pred p] : option α :=

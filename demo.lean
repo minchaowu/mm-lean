@@ -35,7 +35,7 @@ meta def mm_prover : tactic unit := intuit <|> pl_prover
 meta def mm_prover_unfold (to_unfold : list name) : tactic unit :=
 do t ← target,
    (_, pf) ← tactic.solve_fully_aux t mm_prover,
-   dunfold to_unfold pf >>= apply
+   dunfold to_unfold pf {fail_if_unchanged := ff} >>= apply
 
 meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
@@ -48,7 +48,7 @@ meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tact
 <|> return "failed"
 
 meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
-prove_using_tac (intros >> mm_prover) mm_fml b
+prove_using_tac (intros >> mm_prover_unfold ljt_lemmas) mm_fml b
 
 meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
 prove_using_tac (intros >> using_smt skip) mm_fml b
