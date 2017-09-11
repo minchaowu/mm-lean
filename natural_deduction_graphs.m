@@ -263,7 +263,7 @@ LeanForm[LeanPi[nm_, bi_, tp_, bd_], v_] :=
 FoldApps[f_, {}] := f
 FoldApps[f_, vs_] := FoldApps[f[First[vs]], Rest[vs]]
 
-ProveForDiagram[p_]:=ProveUsingLeanTactic[p, "tactic.intros >> mm_prover_unfold [`imp_of_or_imp_left, `imp_of_or_imp_right,`imp_false_of_not, `uncurry, `id_locked, `absurd]", True]
+ProveForDiagram[p_]:=RunLeanTactic[p, "prove_mm_prop_fml", True]
 
 DiagramOfFormula[p_, vs_] := 
  ProofToGraph[
