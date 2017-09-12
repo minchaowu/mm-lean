@@ -72,7 +72,8 @@ by do apply_nonsplitting_rules, triv
 meta def is_nested_imp (e : expr) : bool :=
 match e with
 | `((%%a → %%b) → %%c) := tt
-| _                     := ff
+| `(¬%%a → %%c)         := tt
+| _                      := ff
 end
 
 meta def find_hyp_aux (p : expr → bool) : list expr → tactic expr
