@@ -1,5 +1,15 @@
 (* ::Package:: *)
 
+InactiveToHold[Inactive[h_][a_]]:=With[{t=InactiveToHold[a]},HoldForm[h[t]]]
+InactiveToHold[Inactive[h_][a_,b_]]:=With[{t=InactiveToHold[a],s=InactiveToHold[b]},HoldForm[h[t,s]]]
+InactiveToHold[t_]:=t
+IsNot[HoldForm[Implies[a_,False]]]:=True
+IsNot[_]:=False
+MakeNot[HoldForm[Implies[a_,False]]]:=HoldForm[Not[a]]
+FormatNode[t_]:=With[{s=InactiveToHold[t]},If[IsNot[s],MakeNot[s],s]]
+SecondPart[HoldForm[h_[_,b_,___]]]:=b
+FirstPart[HoldForm[h_[a_,v___]]]:=a
+
 GraphUnionWithLabels[a1_, a2_] := 
  GraphUnion[a1, a2, 
   VertexLabels -> Flatten[VertexLabels /. {Options[a1], Options[a2]}]] 
@@ -28,6 +38,8 @@ ImpliesConclusion[Implies[_, b_]] := b
 ImpliesConclusion[Not[a_]] := False
 ImpliesConclusion[Inactive[Implies][_, b_]] := b
 ImpliesConclusion[Inactive[Not][_]] := False
+ImpliesConclusion[HoldForm[Implies[_,b_]]]:=b
+ImpliesConclusion[HoldForm[Not[_]]]:=False
 
 
 
@@ -36,7 +48,7 @@ ProofToGraph[AndIntro[lhs_, rhs_], ctx_] :=
   With[{rlhs = RootNode[plhs], rrhs = RootNode[prhs], nvx = NewVertexName[]}, 
    EdgeAdd[VertexAddWithLabel[GraphUnionWithLabels[plhs, prhs], 
      Labeled[nvx, 
-      Placed[{"\[And]I", Inactive[And][ProofType[plhs], ProofType[prhs]]}, {Above, 
+      Placed[{"\[And]I", Inactive[And][ProofType[plhs], ProofType[prhs]]//FormatNode}, {Above, 
         Below}]]], {rlhs \[DirectedEdge] nvx, rrhs \[DirectedEdge] nvx}]]]
 
 ProofToGraph[AndElimLeft[pand_], ctx_] :=
@@ -44,7 +56,7 @@ ProofToGraph[AndElimLeft[pand_], ctx_] :=
   With[{r = RootNode[prf], nvx = NewVertexName[]},
    EdgeAdd[
     VertexAddWithLabel[prf, 
-     Labeled[nvx, Placed[{"\[And]EL", ProofType[prf][[1]]}, {Above, Below}]]],
+     Labeled[nvx, Placed[{"\[And]EL", ProofType[prf]//FirstPart//FormatNode}, {Above, Below}]]],
      r \[DirectedEdge] nvx]]]
 
 ProofToGraph[AndElimRight[pand_], ctx_] :=
@@ -52,7 +64,7 @@ ProofToGraph[AndElimRight[pand_], ctx_] :=
   With[{r = RootNode[prf], nvx = NewVertexName[]},
    EdgeAdd[
     VertexAddWithLabel[prf, 
-     Labeled[nvx, Placed[{"\[And]ER", ProofType[prf][[2]]}, {Above, Below}]]],
+     Labeled[nvx, Placed[{"\[And]ER", ProofType[prf]//SecondPart//FormatNode}, {Above, Below}]]],
      r \[DirectedEdge] nvx]]]
 
 ProofToGraph[OrIntroLeft[trhs_, plhs_], ctx_] :=
@@ -61,7 +73,7 @@ ProofToGraph[OrIntroLeft[trhs_, plhs_], ctx_] :=
    EdgeAdd[
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
-      Placed[{"\[Or]IL", Inactive[Or][ProofType[prf], trhs]}, {Above, Below}]]], 
+      Placed[{"\[Or]IL", Inactive[Or][ProofType[prf], trhs]//FormatNode}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[OrIntroRight[tlhs_, prhs_], ctx_] :=
@@ -70,7 +82,7 @@ ProofToGraph[OrIntroRight[tlhs_, prhs_], ctx_] :=
    EdgeAdd[
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
-      Placed[{"\[Or]IR", Inactive[Or][tlhs, ProofType[prf]]}, {Above, Below}]]], 
+      Placed[{"\[Or]IR", Inactive[Or][tlhs, ProofType[prf]]//FormatNode}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[ImpliesElim[pimp_, phyp_], ctx_] :=
@@ -79,7 +91,7 @@ ProofToGraph[ImpliesElim[pimp_, phyp_], ctx_] :=
    EdgeAdd[
     VertexAddWithLabel[GraphUnionWithLabels[prfi, prfh], 
      Labeled[nvx, 
-      Placed[{"\[Implies]E", ImpliesConclusion[ProofType[prfi]]}, {Above, 
+      Placed[{"\[Implies]E", ImpliesConclusion[ProofType[prfi]]//FormatNode}, {Above, 
         Below}]]], {rimp \[DirectedEdge] nvx, rhyp \[DirectedEdge] nvx}]]]
 
 ProofToGraph[ImpliesIntro[hyp_, nm_, pf_], ctx_] :=
@@ -89,12 +101,12 @@ ProofToGraph[ImpliesIntro[hyp_, nm_, pf_], ctx_] :=
     VertexAddWithLabel[prf, 
      Labeled[nvx, 
       Placed[{"\[Implies]I  [" <> ToString[nm] <> "]", 
-        Inactive[Implies][hyp, ProofType[prf]]}, {Above, Below}]]], 
+        Inactive[Implies][hyp, ProofType[prf]]//FormatNode}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[LocalHyp[nm_, tp_], ctx_] :=
  Graph[{Labeled[NewVertexName[], 
-    Placed[{"Hyp: " <> ToString[nm], tp}, {Above, Below}]]}, {}]
+    Placed[{"Hyp: " <> ToString[nm], tp//FormatNode}, {Above, Below}]]}, {}]
 
 ProofToGraph[OrElim[por_, plhs_, prhs_], ctx_] := 
  With[{prfo = ProofToGraph[por, ctx], prfl = ProofToGraph[plhs, ctx], 
@@ -104,7 +116,7 @@ ProofToGraph[OrElim[por_, plhs_, prhs_], ctx_] :=
    EdgeAdd[VertexAddWithLabel[
      GraphUnionWithLabels[GraphUnionWithLabels[prfo, prfl], prfr], 
      Labeled[nvx, 
-      Placed[{"\[Or]E", ImpliesConclusion[ProofType[prfl]]}, {Above, 
+      Placed[{"\[Or]E", ImpliesConclusion[ProofType[prfl]]//FormatNode}, {Above, 
         Below}]]], {ror \[DirectedEdge] nvx, rlhs \[DirectedEdge] nvx, 
      rrhs \[DirectedEdge] nvx}]]]
 
@@ -116,7 +128,7 @@ ProofToGraph[FalseElim[tgt_, prf_], ctx_] :=
   With[{r = RootNode[prff], nvx = NewVertexName[]},
    EdgeAdd[
     VertexAddWithLabel[prff, 
-     Labeled[nvx, Placed[{"FE", tgt}, {Above, Below}]]], 
+     Labeled[nvx, Placed[{"FE", tgt//FormatNode}, {Above, Below}]]], 
     r \[DirectedEdge] nvx]]]
 
 ProofToGraph[t_, ctx_] := 
