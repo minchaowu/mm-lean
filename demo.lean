@@ -89,3 +89,22 @@ meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
      return $ mk_pis (vs.map prod.snd) bd'
 | _ := failed
 end⟩
+
+meta def normalize_set (mm_fml : string) (b := ff) : tactic string :=
+do e ← preprocess mm_fml,
+   s ← simp_lemmas.mk_default,
+   (t, _) ← solve_aux e target,
+   pt ← simplify s [] t {} `eq failed >>= pp,
+   return $ _root_.trace_fmt pt (λ u, "")
+
+@[sym_to_pexpr]
+meta def inter_to_pexpr : sym_trans_pexpr_rule :=
+⟨"Inter", ```(has_inter.inter)⟩
+
+@[sym_to_pexpr]
+meta def union_to_pexpr : sym_trans_pexpr_rule :=
+⟨"Union", ```(has_union.union)⟩
+
+@[sym_to_pexpr]
+meta def empty_to_pexpr : sym_trans_pexpr_rule :=
+⟨"Empty", ```(∅)⟩
