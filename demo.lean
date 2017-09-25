@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux mathematica
+import system.io provers.ljt provers.tableaux mathematica data.set.basic
 open tactic expr io mathematica name task mmexpr
 
 namespace tactic
