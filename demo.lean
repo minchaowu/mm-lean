@@ -95,7 +95,7 @@ do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
    (t, _) ← solve_aux e target,
    pt ← simplify s [] t {} `eq failed >>= pp,
-   return $ _root_.trace_fmt pt (λ u, "")
+   return $ pt.to_string
 
 @[sym_to_pexpr]
 meta def inter_to_pexpr : sym_trans_pexpr_rule :=
