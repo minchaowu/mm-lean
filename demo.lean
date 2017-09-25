@@ -99,12 +99,12 @@ do e ← preprocess mm_fml,
 
 @[sym_to_pexpr]
 meta def inter_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Inter", ```(has_inter.inter)⟩
+⟨"SetInter", ```(has_inter.inter)⟩
 
 @[sym_to_pexpr]
 meta def union_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Union", ```(has_union.union)⟩
+⟨"SetUnion", ```(has_union.union)⟩
 
 @[sym_to_pexpr]
 meta def empty_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Empty", ```(∅)⟩
+⟨"EmptySet", ```(∅)⟩
