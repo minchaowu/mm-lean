@@ -280,3 +280,6 @@ ProveForDiagram[p_]:=RunLeanTactic[p, "prove_mm_prop_fml", True]
 DiagramOfFormula[p_, vs_] := 
  ProofToGraph[
   FoldApps[ProveForDiagram[p] // ToExpression // LeanForm, vs], {}]
+
+SetAttributes[DiagramOfFormula, HoldFirst]
+SetAttributes[ProveForDiagram, HoldFirst]
