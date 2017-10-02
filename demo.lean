@@ -50,8 +50,11 @@ meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tact
 meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
 prove_using_tac (intros >> mm_prover_unfold ljt_lemmas) mm_fml b
 
+meta def mk_smt_simp_lemmas : tactic simp_lemmas :=
+local_context >>= simp_lemmas.append simp_lemmas.mk
+
 meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
-prove_using_tac (intros >> using_smt skip) mm_fml b
+prove_using_tac (intros >> using_smt (do s ← mk_smt_simp_lemmas, simp_target s)) mm_fml b
 
 ---------------------------------------------------------------------------------
 
