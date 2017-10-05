@@ -54,7 +54,7 @@ meta def mk_smt_simp_lemmas : tactic simp_lemmas :=
 local_context >>= simp_lemmas.append simp_lemmas.mk
 
 meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
-prove_using_tac (intros >> using_smt (do s ← mk_smt_simp_lemmas, simp_target s)) mm_fml b
+prove_using_tac (intros >> using_smt (do s ← mk_smt_simp_lemmas, simp_target s [] {fail_if_unchanged := ff})) mm_fml b
 
 ---------------------------------------------------------------------------------
 
