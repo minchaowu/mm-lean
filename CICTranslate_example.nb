@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3232,        107]
+NotebookOptionsPosition[      2669,         83]
+NotebookOutlinePosition[      3010,         98]
+CellTagsIndexPosition[      2967,         95]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Exit", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7165624317405663`*^9, 3.716562432668461*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\<~/Dropbox/lean/mm_lean\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.716562170441082*^9, 3.716562185583214*^9}}],
+
+Cell[BoxData["\<\"/home/rlewis/Dropbox/lean/mm_lean\"\>"], "Output",
+ CellChangeTimes->{3.716562186335444*^9, 3.716562435858802*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<demo.m\>\""}]], "Input",
+ CellChangeTimes->{{3.716562188206143*^9, 3.71656220354294*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<../mathematica/lean_form.m\>\""}]], "Input",
+ CellChangeTimes->{{3.716562206007227*^9, 3.716562228574871*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<CICTranslate.m\>\""}]], "Input",
+ CellChangeTimes->{{3.7165622605588903`*^9, 3.716562265350532*^9}, 
+   3.716562348933749*^9, {3.7165624401964693`*^9, 3.7165624432524033`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RunLeanTactic", "[", 
+    RowBox[{
+     RowBox[{"LambdaFunction", "[", 
+      RowBox[{"Alpha", ",", 
+       RowBox[{"LambdaFunction", "[", 
+        RowBox[{
+         RowBox[{"Typed", "[", 
+          RowBox[{"x", ",", "Alpha"}], "]"}], ",", "x"}], "]"}]}], "]"}], 
+     ",", "\"\<type_check\>\"", ",", "True"}], "]"}], "//", "ToExpression"}], 
+  " ", "//", " ", "CICTranslate"}]], "Input",
+ CellChangeTimes->{{3.7164703753185577`*^9, 3.7164703842649217`*^9}, {
+  3.716470418136692*^9, 3.7164704207205687`*^9}, {3.716470456374452*^9, 
+  3.716470491590122*^9}, {3.716470602948914*^9, 3.7164706109739*^9}, {
+  3.716470659282978*^9, 3.7164706609850435`*^9}, {3.716470879775661*^9, 
+  3.7164708818014193`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"PiType", "[", 
+  RowBox[{
+   RowBox[{"Typed", "[", 
+    RowBox[{"Alpha", ",", "StarType"}], "]"}], ",", 
+   RowBox[{"PiType", "[", 
+    RowBox[{
+     RowBox[{"Typed", "[", 
+      RowBox[{"x", ",", "Alpha"}], "]"}], ",", "Alpha"}], "]"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.716470889757468*^9, 3.716562510403371*^9, 
+  3.7165627175762987`*^9}]
+}, Open  ]]
+},
+WindowSize->{870, 805},
+WindowMargins->{{529, Automatic}, {400, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 120, 2, 32, "Input"],
+Cell[CellGroupData[{
+Cell[703, 26, 163, 3, 34, "Input"],
+Cell[869, 31, 132, 1, 32, "Output"]
+}, Open  ]],
+Cell[1016, 35, 123, 2, 32, "Input"],
+Cell[1142, 39, 144, 2, 34, "Input"],
+Cell[1289, 43, 210, 3, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1524, 50, 751, 17, 56, "Input"],
+Cell[2278, 69, 375, 11, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+

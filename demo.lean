@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux mathematica data.set.basic
+import system.io provers.ljt provers.tableaux mathematica data.set.basic lambda extract_consts
 open tactic expr io mathematica name task mmexpr
 
 namespace tactic
@@ -56,6 +56,16 @@ local_context >>= simp_lemmas.append simp_lemmas.mk
 meta def mm_smt (mm_fml : string) (b := ff) : tactic string :=
 prove_using_tac (intros >> using_smt (do s ← mk_smt_simp_lemmas, simp_target s [] {fail_if_unchanged := ff})) mm_fml b
 
+meta def elaborate (mm_fml : string) (b := ff) : tactic string :=
+(do e ← preprocess mm_fml,
+   return $ if b then form_of_expr e else e.to_string)
+<|> return "failed to elaborate"
+
+meta def type_check (mm_fml : string) (b := ff) : tactic string :=
+(do e ← preprocess mm_fml >>= infer_type,
+   return $ if b then form_of_expr e else e.to_string)
+<|> return "failed to typecheck"
+
 ---------------------------------------------------------------------------------
 
 meta def mk_local_const (n : name) (tp : pexpr): expr :=
@@ -100,6 +110,16 @@ do e ← preprocess mm_fml,
    pt ← simplify s [] t {} `eq failed >>= pp,
    return $ pt.to_string
 
+meta def normalize_set_lemmas (mm_fml : string) (b := ff) : tactic string :=
+do e ← preprocess mm_fml,
+   s ← simp_lemmas.mk_default,
+   pt ← simplify s [] e {} `eq failed,
+   ils ← lemmas_used pt.2,
+   return $ if b then 
+    "{"++ mathematica.form_of_expr ils.head ++ string.join (ils.tail.map (λ st, ", " ++ mathematica.form_of_expr st)) ++ "}"
+   else ils.to_string
+    
+
 @[sym_to_pexpr]
 meta def inter_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"SetInter", ```(has_inter.inter)⟩
@@ -111,3 +131,4 @@ meta def union_to_pexpr : sym_trans_pexpr_rule :=
 @[sym_to_pexpr]
 meta def empty_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"EmptySet", ```(∅)⟩
+
