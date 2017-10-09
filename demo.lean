@@ -41,6 +41,10 @@ meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
    pexpr_of_mmexpr trans_env.empty m >>= to_expr
 
+meta def translate (mm_fml : string) : tactic string :=
+do f ← preprocess mm_fml >>= pp,
+   return f.to_string
+
 meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tactic string :=
 (do e ← preprocess mm_fml,
     (_, pf) ← tactic.solve_fully_aux e tac, 
