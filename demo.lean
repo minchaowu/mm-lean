@@ -118,10 +118,7 @@ meta def normalize_set_lemmas (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
    pt ← simplify s [] e {} `eq failed,
-   ils ← lemmas_used pt.2,
-   return $ if b then 
-    "{"++ mathematica.form_of_expr ils.head ++ string.join (ils.tail.map (λ st, ", " ++ mathematica.form_of_expr st)) ++ "}"
-   else ils.to_string
+   print_lemmas_used pt.2
     
 
 @[sym_to_pexpr]
@@ -136,3 +133,9 @@ meta def union_to_pexpr : sym_trans_pexpr_rule :=
 meta def empty_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"EmptySet", ```(∅)⟩
 
+#exit
+def s := "AY[ForAllTyped][AY[List][Y[P]],AY[Implies][AY[set][Y[nat]],Y[Prop]],AY[ForAllTyped][AY[List][Y[A],Y[B],Y[C]],AY[set][Y[nat]],AY[P][AY[SetInter][AY[SetUnion][Y[A],Y[B]],Y[C]]]]]"
+
+def emp := "AY[ForAllTyped][AY[List][Y[P]],AY[Implies][AY[set][Y[nat]],Y[Prop]],AY[ForAllTyped][AY[List][Y[A],Y[B],Y[C]],AY[set][Y[nat]],AY[P][AY[SetInter][AY[SetUnion][Y[A],Y[EmptySet]],Y[C]]]]]"
+
+run_cmd normalize_set_lemmas emp >>= trace
