@@ -79,13 +79,3 @@ meta def pi_to_pexpr : app_trans_pexpr_keyed_rule :=
 | _ := failed
 end⟩
 
-#exit
-
-def mmstr := "AY[LambdaFunction][Y[Alpha],AY[LambdaFunction][AY[Typed][Y[x],Y[Alpha]],AY[Tuple][Y[x],Y[x],Y[x]]]]"
-
-run_cmd
-do mme ← parse_mmexpr_tac mmstr.to_char_buffer,
-   trace mme,
-   e ← pexpr_of_mmexpr trans_env.empty mme >>= to_expr,
-   trace e,
-   trace $ mathematica.form_of_expr e

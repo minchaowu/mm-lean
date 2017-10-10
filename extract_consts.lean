@@ -69,7 +69,6 @@ meta def list_prop_consts : expr → tactic (list name)
 | (elet _ e1 e2 e3) := do l1 ← list_prop_consts e1, l2 ← list_prop_consts e2, l3 ← list_prop_consts e3, return $ l1 ++ l2 ++ l3
 | (macro _ _) := return []
 
-#print add_assoc
 
 meta def rb_set.of_list {α : Type} [has_ordering α] : list α → rb_set α
 | [] := mk_rb_set
@@ -103,18 +102,17 @@ meta def is_recursor : name → bool
 | (mk_string "case_strong_induction_on" n) := tt
 | _ := ff
 
+private meta def boring_consts : name_set :=
+name_set.of_list [`id_locked, `congr, `forall_congr_eq, `congr_arg, `propext, `forall_const, `eq_self_iff_true]
+
 meta def is_boring : name → bool
 | (mk_string _ (mk_string "eq" _)) := tt
-| `id_locked := tt
 | (mk_string _ (mk_string "or" _)) := tt
 | (mk_string _ (mk_string "and" _)) := tt
 | (mk_string _ (mk_string "decidable" _)) := tt
 | (mk_string _ (mk_string "iff" _)) := tt
 | (mk_string _ (mk_string "not" _)) := tt
-| `congr := tt
-| `forall_congr_eq := tt
-| `congr_arg := tt
-| _ := ff
+| n := boring_consts.contains n
 
 end
 
@@ -137,7 +135,7 @@ do exs ← get_interesting_lemmas_used e,
    --pex ← exs.mmap pp,
    string.join <$> exs.mmap (λ s, do pps ← pp s.2, return $ s.1.to_string ++ " : " ++ pps.to_string ++ "\n")
 
-
+/-
 run_cmd 
 do l ← get_decl `nat.mod_lt,
    ns ← name_set.of_list <$> list_prop_consts l.value,
@@ -149,3 +147,4 @@ do l ← get_decl `nat.mod_lt,
    nms ← name_set.of_list <$> (list_prop_consts l.value),
    exps ← apps_of_interesting_consts nms l.value,
    exps.mmap infer_type >>= trace
+-/
