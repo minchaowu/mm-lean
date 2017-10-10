@@ -6,12 +6,9 @@ OutputFormat[h_[args___]] :=
     StringRiffle[Apply[List, Map[OutputFormat, Hold[args]]], ","] <> 
   "]"
   
-RunLeanTactic[x_, t_String, b_?BooleanQ]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, "import demo", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
+RunLeanTactic[x_, t_String, b_?BooleanQ, i_?StringQ]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, StringForm["import demo `1`", i], "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
 
-RunLeanTactic[x_,t_]:=RunLeanTactic[x,t,False]
-
-SetAttributes[OutputFormat, HoldFirst];
-SetAttributes[RunLeanTactic, HoldFirst];
+RunLeanTactic[x_,t_]:=RunLeanTactic[x,t,False,""]
 
 ProveUsingLeanTactic[x_, t_String, b_?BooleanQ] := Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd prove_using_tac (`1`) \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, "import demo", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
 
