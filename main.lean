@@ -130,6 +130,10 @@ meta def union_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"SetUnion", ```(has_union.union)⟩
 
 @[sym_to_pexpr]
+meta def compl_to_pexpr : sym_trans_pexpr_rule :=
+⟨"SetCompl", ```(has_neg.neg)⟩
+
+@[sym_to_pexpr]
 meta def empty_to_pexpr : sym_trans_pexpr_rule :=
 ⟨"EmptySet", ```(∅)⟩
 
