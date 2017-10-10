@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     89287,       1968]
-NotebookOptionsPosition[     87786,       1913]
-NotebookOutlinePosition[     88127,       1928]
-CellTagsIndexPosition[     88084,       1925]
+NotebookDataLength[     90050,       1988]
+NotebookOptionsPosition[     88508,       1932]
+NotebookOutlinePosition[     88849,       1947]
+CellTagsIndexPosition[     88806,       1944]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1831,6 +1831,25 @@ u\\nset.union_comm : \[ForAll] {\[Alpha] : Type ?} (a b : set \[Alpha]), a \
  CellChangeTimes->{3.7166639944325523`*^9}]
 }, Open  ]],
 
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "The", " ", "example", " ", "below", " ", "requires", " ", "you", " ", 
+     "to", " ", "be", " ", "running", " ", "a", " ", "version", " ", "of", 
+     " ", "Lean", " ", "with", " ", "meta"}], "-", 
+    RowBox[{"floats", ".", " ", 
+     RowBox[{"https", ":"}]}]}], "//", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"github", ".", "com"}], "/", "rlewis1988"}], "/", "lean"}], 
+      "/", "tree"}], "/", "floats"}], "/"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.716666231086009*^9, 3.71666627868334*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -1857,11 +1876,11 @@ Cell[BoxData[
 Cell["\<\
 Syntax::sntx: Invalid syntax in or before \
 \"/home/rlewis/Dropbox/lean/mm_lean/temp.lean:1:0: error: invalid import: \
-data.seq.computation\" (line 2 of \"/tmp/m000008280471\").
+data.seq.computation\" (line 2 of \"/tmp/m000014280471\").
                                             ^\
 \>", "Message", "MSG",
  CellChangeTimes->{3.7166613072088757`*^9, 3.7166613485268373`*^9, 
-  3.716662580090308*^9}],
+  3.716662580090308*^9, 3.716664641388215*^9, 3.716664801240831*^9}],
 
 Cell[BoxData["\<\"ennreal.densely_ordered._match_1 : \[ForAll] (r : \
 \:211d),\\n  0 \[LessEqual] r \[RightArrow]\\n  \[ForAll] (p : \:211d),\\n    \
@@ -1908,7 +1927,7 @@ q < \[CurlyEpsilon]), _ = _\\nennreal.topological_add_monoid.equations._eqn_1 \
 b\\nexists_pos_of_rat : \[ForAll] {r : \:211d}, 0 < r \[RightArrow] \
 (\[Exists] (q : \:211a), 0 < q \[And] of_rat q < r)\"\>"], "Output",
  CellChangeTimes->{3.716661307252388*^9, 3.716661348591854*^9, 
-  3.716662580952064*^9}]
+  3.716662580952064*^9, 3.7166646413995934`*^9, 3.716664801303349*^9}]
 }, Open  ]]
 },
 WindowSize->{1600, 1135},
@@ -1965,10 +1984,11 @@ Cell[CellGroupData[{
 Cell[82330, 1804, 628, 17, 34, "Input"],
 Cell[82961, 1823, 508, 7, 103, "Output"]
 }, Open  ]],
+Cell[83484, 1833, 629, 17, 32, "Input"],
 Cell[CellGroupData[{
-Cell[83506, 1835, 693, 19, 34, "Input"],
-Cell[84202, 1856, 351, 7, 35, "Message"],
-Cell[84556, 1865, 3214, 45, 762, "Output"]
+Cell[84138, 1854, 693, 19, 34, "Input"],
+Cell[84834, 1875, 395, 7, 35, "Message"],
+Cell[85232, 1884, 3260, 45, 762, "Output"]
 }, Open  ]]
 }
 ]
