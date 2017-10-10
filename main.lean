@@ -110,14 +110,13 @@ end⟩
 meta def normalize_set (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
-   (t, _) ← solve_aux e target,
-   pt ← simplify s [] t {} `eq failed >>= pp,
+   pt ← simplify s [] e {fail_if_unchanged := ff} `eq failed >>= pp,
    return $ pt.to_string
 
 meta def normalize_set_lemmas (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
-   pt ← simplify s [] e {} `eq failed,
+   pt ← simplify s [] e {fail_if_unchanged := ff} `eq failed,
    print_lemmas_used pt.2
     
 
