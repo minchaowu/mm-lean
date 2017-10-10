@@ -70,9 +70,6 @@ meta def list_prop_consts : expr → tactic (list name)
 | (macro _ _) := return []
 
 
-meta def rb_set.of_list {α : Type} [has_ordering α] : list α → rb_set α
-| [] := mk_rb_set
-| (h::t) := (rb_set.of_list t).insert h
 
 meta def is_app_of_int_const (ics : name_set) : expr → bool
 | (const nm _) := ics.contains nm
