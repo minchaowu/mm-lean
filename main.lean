@@ -7,6 +7,13 @@ Author: Minchao Wu
 import system.io provers.ljt provers.tableaux mathematica data.set.basic lambda extract_consts _target.deps.relevance_filter.k_nn
 open tactic expr io mathematica name task mmexpr
 
+
+@[simp]
+lemma set_distrib_right {α} (s t u : set α) : s ∩ (t ∪ u) = (s ∩ t) ∪ (s ∩ u) :=
+set.ext $ λ v, 
+⟨λ h, begin cases h.2, left, constructor, apply h.1, assumption, right, constructor, apply h.1, assumption end,
+ λ h, begin cases h, constructor, apply a.1, left, apply a.2, constructor, apply a.1, right, apply a.2 end⟩
+
 namespace tactic
 meta def solve_fully_aux {α : Type} (ex : expr) (tac : tactic α) : tactic (α × expr) :=
 do (a, e) ← solve_aux ex tac,
