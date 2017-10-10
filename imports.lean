@@ -25,8 +25,8 @@ import _target.deps.mathlib.logic.basic
 import _target.deps.mathlib.logic.function_inverse
 import _target.deps.mathlib.data.seq.wseq
 import _target.deps.mathlib.data.seq.parallel
-import _target.deps.mathlib.data.seq.seq
-import _target.deps.mathlib.data.seq.computation
+--import _target.deps.mathlib.data.seq.seq
+--import _target.deps.mathlib.data.seq.computation
 import _target.deps.mathlib.data.fin
 import _target.deps.mathlib.data.hash_map
 import _target.deps.mathlib.data.nat.basic

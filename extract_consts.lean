@@ -127,10 +127,14 @@ meta def get_interesting_lemmas_used (e : expr) : tactic (list (name × expr)) :
 do ns ← get_interesting_consts e,
    ns.mfold [] (λ n l, do tp ← mk_const n >>= infer_type, return ((n, tp)::l))
    
+meta def print_name_type_list (exs : list (name × expr)) : tactic string :=
+string.join <$> exs.mmap (λ s, do pps ← pp s.2, return $ s.1.to_string ++ " : " ++ pps.to_string ++ "\n")
+
+
 meta def print_lemmas_used (e : expr) : tactic string :=
 do exs ← get_interesting_lemmas_used e,
    --pex ← exs.mmap pp,
-   string.join <$> exs.mmap (λ s, do pps ← pp s.2, return $ s.1.to_string ++ " : " ++ pps.to_string ++ "\n")
+   print_name_type_list exs
 
 /-
 run_cmd 
