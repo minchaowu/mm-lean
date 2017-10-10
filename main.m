@@ -9,6 +9,8 @@ OutputFormat[h_[args___]] :=
 RunLeanTactic[x_, t_String, b_?BooleanQ, i_?StringQ]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, StringForm["import main `1`", i], "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
 
 RunLeanTactic[x_,t_]:=RunLeanTactic[x,t,False,""]
+RunLeanTactic[x_,t_,b_?BooleanQ] := RunLeanTactic[x,t,b,""]
+RunLeanTactic[x_,t_,i_String] := RunLeanTactic[x,t,False,i]
 
 ProveUsingLeanTactic[x_, t_String, b_?BooleanQ] := Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd prove_using_tac (`1`) \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, "import main", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
 
