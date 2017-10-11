@@ -1,9 +1,9 @@
 [package]
 name = "mm-lean"
 version = "0.1"
-lean_version = "master"
+lean_version = "3.3.0"
 
 [dependencies]
-mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "6cda3f0429b827294730757af271f6a043adc568"}
-mathlib = {git = "https://github.com/leanprover/mathlib", rev = "e7b2a0f7a959ebab86d56f66761d5585280f460a"}
-relevance_filter = {git = "https://github.com/rlewis1988/relevance_filter", rev = "dd0aeece01a3a6b06981b16cd7695510a3809ef6"}
+mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "dd398666369ae583f789712e164cec91782a1069"}
+mathlib = {git = "https://github.com/leanprover/mathlib", rev = "f705963c812680897bf4ddc5504f33dcf2e60fad"}
+relevance_filter = {git = "https://github.com/rlewis1988/relevance_filter", rev = "3981de116f59c96f8b62138ff7067baa8701a62d"}

@@ -18,8 +18,10 @@ ProveUsingLeanTactic[x_,t_] := ProveUsingLeanTactic[x,t,False]
 
 ProveInteractively[e_] := Module[{s,t,cmd,ts}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; t=OpenWrite["interactive_temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd translate \"`1`\" >>= write_string",e // OutputFormat]; WriteString[s, "import main", "\n", cmd]; Close[s];RunThrough["lean temp.lean", 0];ts=Import["temp.txt", CharacterEncoding -> "UTF8"]; cmd=StringForm["example : `1` := _", ts]; WriteString[t, cmd]; Close[t]; RunProcess[{"emacs","interactive_temp.lean"}];];
 
+SelectLeanPremises[e_] := RunLeanTactic[e, "find_relevant_facts", "premise_selection"]
+
 SetAttributes[OutputFormat, HoldFirst];
 SetAttributes[RunLeanTactic, HoldFirst];
 SetAttributes[ProveUsingLeanTactic, HoldFirst];
-
 SetAttributes[ProveInteractively, HoldFirst];
+SetAttributes[SelectLeanPremises, HoldFirst];
