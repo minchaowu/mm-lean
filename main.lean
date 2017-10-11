@@ -80,40 +80,7 @@ meta def type_check (mm_fml : string) (b := ff) : tactic string :=
 
 ---------------------------------------------------------------------------------
 
-meta def mk_local_const (n : name) (tp : pexpr): expr :=
-local_const n n binder_info.default (pexpr.to_raw_expr tp)
 
-private meta def sym_to_lcs_using (env : trans_env) (e : mmexpr) : mmexpr → tactic (string × expr)
-| (sym s) := do p ← pexpr_of_mmexpr env e,
-                return $ (s, mk_local_const s p)
-| _ := failed
-
-private meta def sym_to_lcp : mmexpr → tactic (string × expr)
-| (sym s) := return $ (s, mk_local_const_placeholder s)
-| _ := failed
-
-@[sym_to_pexpr]
-meta def type_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Type", ```(Type)⟩
-
-@[sym_to_pexpr]
-meta def prop_to_pexpr : sym_trans_pexpr_rule :=
-⟨"Prop", ```(Prop)⟩
-
-@[app_to_pexpr_keyed]
-meta def forall_typed_to_pexpr : app_trans_pexpr_keyed_rule :=
-⟨"ForAllTyped",
-λ env args, match args with
-| [sym x, t, bd] := 
-  do (n, pe) ← sym_to_lcs_using env t (sym x),
-     bd' ← pexpr_of_mmexpr (env.insert n pe) bd,
-     return $ mk_pi' pe bd'
-| [app (sym "List") l, t, bd] :=
-  do vs ← l.mfor (sym_to_lcs_using env t),
-     bd' ← pexpr_of_mmexpr (env.insert_list vs) bd,
-     return $ mk_pis (vs.map prod.snd) bd'
-| _ := failed
-end⟩
 
 meta def normalize_set (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml,
@@ -128,34 +95,3 @@ do e ← preprocess mm_fml,
    print_lemmas_used pt.2
     
 
-@[sym_to_pexpr]
-meta def inter_to_pexpr : sym_trans_pexpr_rule :=
-⟨"SetInter", ```(has_inter.inter)⟩
-
-@[sym_to_pexpr]
-meta def union_to_pexpr : sym_trans_pexpr_rule :=
-⟨"SetUnion", ```(has_union.union)⟩
-
-@[sym_to_pexpr]
-meta def compl_to_pexpr : sym_trans_pexpr_rule :=
-⟨"SetCompl", ```(has_neg.neg)⟩
-
-@[sym_to_pexpr]
-meta def empty_to_pexpr : sym_trans_pexpr_rule :=
-⟨"EmptySet", ```(∅)⟩
-
-/-
-def s := "AY[ForAllTyped][AY[List][Y[P]],AY[Implies][AY[set][Y[nat]],Y[Prop]],AY[ForAllTyped][AY[List][Y[A],Y[B],Y[C]],AY[set][Y[nat]],AY[P][AY[SetInter][AY[SetUnion][Y[A],Y[B]],Y[C]]]]]"
-
-def emp := "AY[ForAllTyped][AY[List][Y[P]],AY[Implies][AY[set][Y[nat]],Y[Prop]],AY[ForAllTyped][AY[List][Y[A],Y[B],Y[C]],AY[set][Y[nat]],AY[P][AY[SetInter][AY[SetUnion][Y[A],Y[EmptySet]],Y[C]]]]]"
-
-run_cmd normalize_set_lemmas emp >>= trace
--/
-
-/-
-meta def find_relevant_facts (mm_fml : string) (b := ff) : tactic string :=
-do e ← preprocess mm_fml,
-   (contents_map, features_map, names) ← get_all_decls,
-   let relevant_facts := find_k_most_relevant_facts_to_expr e contents_map features_map names.snd 10,
-   relevant_facts.mmap (λ f, do tp ← mk_const f.1 >>= infer_type, return (f.1, tp)) >>= print_name_type_list
--/
