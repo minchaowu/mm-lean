@@ -294,3 +294,6 @@ DiagramOfFormula[p_, vs_] := Graph[
  ProofToGraph[FoldApps[ProveForDiagram[p] // ToExpression // LeanForm, vs], {}],
  $ProofGraphStyle
 ];
+
+SetAttributes[DiagramOfFormula, HoldFirst];
+SetAttributes[ProveForDiagram, HoldFirst];
