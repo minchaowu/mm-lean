@@ -112,4 +112,4 @@ do finish <|>
          (apply_backtracking_rule intuit))
 
 meta def glivenko : tactic unit :=
-do intros, deny_conclusion, intuit
+do repeat (intro_fresh >> skip), deny_conclusion, intuit
