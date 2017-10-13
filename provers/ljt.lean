@@ -110,3 +110,6 @@ do finish <|>
        apply_splitting_rule >>
          (intuit >> intuit) <|>
          (apply_backtracking_rule intuit))
+
+meta def glivenko : tactic unit :=
+do intros >> deny_conclusion >> intuit
