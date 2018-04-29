@@ -13,7 +13,7 @@ open tactic expr io mathematica name task mmexpr
 lemma set_distrib_right {α} (s t u : set α) : s ∩ (t ∪ u) = (s ∩ t) ∪ (s ∩ u) :=
 set.ext $ λ v, 
 ⟨λ h, begin cases h.2, left, constructor, apply h.1, assumption, right, constructor, apply h.1, assumption end,
- λ h, begin cases h, constructor, apply a.1, left, apply a.2, constructor, apply a.1, right, apply a.2 end⟩
+ λ h, begin cases h, constructor, apply h.1, left, apply h.2, constructor, apply h.1, right, apply h.2 end⟩
 
 namespace tactic
 meta def solve_fully_aux {α : Type} (ex : expr) (tac : tactic α) : tactic (α × expr) :=
@@ -27,7 +27,7 @@ meta def peek_type (e : expr) : tactic string :=
 infer_type e >>= λ t, return $ to_string t
 
 meta def write_string (s : string) : tactic unit :=
-run_io $ λ ioi, @write_file ioi "temp.txt" s io.mode.write
+unsafe_run_io $ write_file "temp.txt" s io.mode.write
 
 meta def mm_check : expr → tactic unit := 
 λ e, peek_type e >>= λ s, write_string s
@@ -43,7 +43,7 @@ meta def mm_prover : tactic unit := intuit <|> glivenko
 meta def mm_prover_unfold (to_unfold : list name) : tactic unit :=
 do t ← target,
    (_, pf) ← tactic.solve_fully_aux t mm_prover,
-   dunfold to_unfold pf {fail_if_unchanged := ff} >>= apply
+   dunfold to_unfold pf {fail_if_unchanged := ff} >>= apply >> skip
 
 meta def preprocess (mm_fml : string) : tactic expr :=
 do m ← parse_mmexpr_tac $ string.to_char_buffer mm_fml,
@@ -80,8 +80,6 @@ meta def type_check (mm_fml : string) (b := ff) : tactic string :=
 
 ---------------------------------------------------------------------------------
 
-
-
 meta def normalize_set (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
@@ -93,5 +91,3 @@ do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
    pt ← simplify s [] e {fail_if_unchanged := ff} `eq failed,
    print_lemmas_used pt.2
-    
-

@@ -88,19 +88,19 @@ meta def apply_splitting_rule : tactic unit :=
 (applyc ``and.intro) <|>
 (do h ← find_hyp (λ e, is_app_of e `or),
     e ← to_expr ``(or.elim %%h),
-    apply e; clear h)
+    apply e >> clear h)
 
 meta def elim_nested_imp (cont : tactic unit) : list expr → tactic unit
 | []        := failed
 | (h :: hs) := do t ← infer_type h,
                   (guard (is_nested_imp t) >>
                      (do e ← to_expr ``(nested_imp_elim %%h),
-                         apply e; clear h; try intros; cont)) <|>
+                         apply e >> clear h >> try intros; cont)) <|>
                      (elim_nested_imp hs)
 
 meta def apply_backtracking_rule (cont : tactic unit) : tactic unit :=
 do t ← target,
-   (guard (is_app_of t `or) >> ((left; cont) <|> (right; cont))) <|>
+   (guard (is_app_of t `or) >> ((left >> cont) <|> (right >> cont))) <|>
    (local_context >>= elim_nested_imp cont)
 
 meta def intuit : tactic unit :=
