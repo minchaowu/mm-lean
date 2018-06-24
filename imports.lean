@@ -1,11 +1,8 @@
-import _target.deps.mathlib.category.basic
-import _target.deps.mathlib.algebra.ordered_monoid
-import _target.deps.mathlib.algebra.big_operators
-import _target.deps.mathlib.algebra.ring
-import _target.deps.mathlib.algebra.group_power
-import _target.deps.mathlib.algebra.group
-import _target.deps.mathlib.algebra.module
-import _target.deps.mathlib.algebra.field
+-- import category.basic
+import algebra
+-- import set_theory.zfc
+
+#exit
 import _target.deps.mathlib.theories.set_theory
 import _target.deps.mathlib.pending.default
 import _target.deps.mathlib.tactic.finish

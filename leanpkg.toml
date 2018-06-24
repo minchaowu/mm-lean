@@ -5,5 +5,5 @@ lean_version = "3.4.1"
 
 [dependencies]
 mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "092adde8e3411376162974a7f5e87db260202e3c"}
-mathlib = {git = "https://github.com/leanprover/mathlib", rev = "fe7d5738417aeaf835790af2101b98d1758ad8fe"}
+mathlib = {git = "https://github.com/leanprover/mathlib", rev = "4082136efa01e53e4e67e71e6623fcfba71498f7"}
 relevance_filter = {git = "https://github.com/rlewis1988/relevance_filter", rev = "3981de116f59c96f8b62138ff7067baa8701a62d"}
