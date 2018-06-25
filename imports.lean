@@ -1,84 +1,67 @@
+import algebra --default
+-- import algebra.archimedean
+-- import algebra.big_operators
+-- import algebra.char_zero
+-- import algebra.euclidean_domain
+-- import algebra.ordered_field
+-- import algebra.pi_instances
+-- import analysis.complex
+-- import analysis.ennreal
+-- import analysis.limits
+-- import analysis.measure_theory.borel_space
+-- import analysis.measure_theory.lebesgue_measure
+-- import analysis.measure_theory.measurable_space
+-- import analysis.measure_theory.measure_space
+-- import analysis.measure_theory.outer_measure
+-- import analysis.metric_space
+-- import analysis.nnreal
+-- import analysis.probability_mass_function
+-- import analysis.real
+-- import analysis.topology.continuity
+-- import analysis.topology.infinite_sum
+-- import analysis.topology.topological_space
+-- import analysis.topology.topological_structures
+-- import analysis.topology.uniform_space
 -- import category.basic
-import algebra
+-- import computability.halting
+-- import computability.partrec_code
+-- import computability.partrec
+-- import computability.primrec
+-- import computability.turing_machine
+-- import group_theory.coset
+-- import group_theory.free_group
+-- import group_theory.order_of_element
+-- import group_theory.subgroup
+-- import group_theory.submonoid
+-- import linear_algebra.basic
+-- import linear_algebra.dimension
+-- import linear_algebra.linear_map_module
+-- import linear_algebra.multivariate_polynomial
+-- import linear_algebra.prod_module
+-- import linear_algebra.quotient_module
+-- import linear_algebra.subtype_module
+-- import logic.basic
+-- import logic.embedding
+-- import logic.function
+-- import logic.relation
+-- import logic.relator
+-- import logic.schroeder_bernstein
+-- import number_theory.dioph
+-- import number_theory.pell
+-- import order -- default
+-- import order.bounds
+-- import order.complete_boolean_algebra
+-- import order.conditionally_complete_lattice
+-- import order.filter
+-- import order.fixed_points
+-- import order.galois_connection
+-- import order.liminf_limsup
+-- import order.order_iso
+-- import order.zorn
+-- import ring_theory.ideals
+-- import ring_theory.localization
+-- import set_theory.cardinal
+-- import set_theory.cofinality
+-- import set_theory.ordinal
 -- import set_theory.zfc
 
-#exit
-import _target.deps.mathlib.theories.set_theory
-import _target.deps.mathlib.pending.default
-import _target.deps.mathlib.tactic.finish
-import _target.deps.mathlib.tactic.alias
-import _target.deps.mathlib.tactic.rcases
-import _target.deps.mathlib.tactic.converter.old_conv
-import _target.deps.mathlib.tactic.converter.interactive
-import _target.deps.mathlib.tactic.converter.binders
-import _target.deps.mathlib.tactic.default
-import _target.deps.mathlib.tactic.interactive
-import _target.deps.mathlib.topology.topological_space
-import _target.deps.mathlib.topology.topological_structures
-import _target.deps.mathlib.topology.measure
-import _target.deps.mathlib.topology.continuity
-import _target.deps.mathlib.topology.infinite_sum
-import _target.deps.mathlib.topology.ennreal
-import _target.deps.mathlib.topology.measurable_space
-import _target.deps.mathlib.topology.uniform_space
-import _target.deps.mathlib.topology.metric_space
-import _target.deps.mathlib.topology.real
-import _target.deps.mathlib.logic.basic
-import _target.deps.mathlib.logic.function_inverse
-import _target.deps.mathlib.data.seq.wseq
-import _target.deps.mathlib.data.seq.parallel
-import _target.deps.mathlib.data.seq.seq
-import _target.deps.mathlib.data.seq.computation
-import _target.deps.mathlib.data.fin
-import _target.deps.mathlib.data.hash_map
-import _target.deps.mathlib.data.nat.basic
-import _target.deps.mathlib.data.nat.sqrt
-import _target.deps.mathlib.data.nat.gcd
-import _target.deps.mathlib.data.nat.sub
-import _target.deps.mathlib.data.nat.pairing
-import _target.deps.mathlib.data.nat.bquant
-import _target.deps.mathlib.data.pnat
-import _target.deps.mathlib.data.encodable
-import _target.deps.mathlib.data.num.lemmas
-import _target.deps.mathlib.data.num.basic
-import _target.deps.mathlib.data.num.bitwise
-import _target.deps.mathlib.data.array.lemmas
-import _target.deps.mathlib.data.prod
-import _target.deps.mathlib.data.fp.basic
-import _target.deps.mathlib.data.option
-import _target.deps.mathlib.data.int.basic
-import _target.deps.mathlib.data.int.order
-import _target.deps.mathlib.data.finset.basic
-import _target.deps.mathlib.data.finset.fold
-import _target.deps.mathlib.data.finset.default
-import _target.deps.mathlib.data.rat
-import _target.deps.mathlib.data.set.enumerate
-import _target.deps.mathlib.data.set.basic
-import _target.deps.mathlib.data.set.prod
-import _target.deps.mathlib.data.set.lattice
-import _target.deps.mathlib.data.set.default
-import _target.deps.mathlib.data.set.countable
-import _target.deps.mathlib.data.set.finite
-import _target.deps.mathlib.data.equiv
-import _target.deps.mathlib.data.bool
-import _target.deps.mathlib.data.list.set
-import _target.deps.mathlib.data.list.basic
-import _target.deps.mathlib.data.list.comb
-import _target.deps.mathlib.data.list.perm
-import _target.deps.mathlib.data.list.default
-import _target.deps.mathlib.data.list.sort
-import _target.deps.mathlib.data.sigma.basic
-import _target.deps.mathlib.data.sigma.default
-import _target.deps.mathlib.data.pfun
-import _target.deps.mathlib.order.zorn
-import _target.deps.mathlib.order.basic
-import _target.deps.mathlib.order.complete_boolean_algebra
-import _target.deps.mathlib.order.boolean_algebra
-import _target.deps.mathlib.order.bounds
-import _target.deps.mathlib.order.lattice
-import _target.deps.mathlib.order.galois_connection
-import _target.deps.mathlib.order.bounded_lattice
-import _target.deps.mathlib.order.default
-import _target.deps.mathlib.order.filter
-import _target.deps.mathlib.order.fixed_points
-import _target.deps.mathlib.order.complete_lattice

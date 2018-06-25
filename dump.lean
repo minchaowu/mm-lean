@@ -12,17 +12,19 @@ do env ← get_env,
      | _ := l
     end)
 
-meta def write_string (s : string) : tactic unit :=
-unsafe_run_io $ @write_file "temp.txt" s io.mode.write
+-- meta def write_string (s : string) : tactic unit :=
+-- unsafe_run_io $ @write_file "temp.txt" s io.mode.write
 
-meta def dump (n : ℕ) : tactic string := 
+meta def dump (n : ℕ) : tactic format := 
 do l ← gen_thm,
-   return (to_fmt (list.map (λ e : name × expr, (e.1, form_of_expr e.2)) (list.take n l))).to_string
+   let f := λ e : name × expr, (e.1, e.2, form_of_expr e.2) in do
+   tactic.pp $ list.map f $ list.take n l >>= return
 
-meta def dump_all : tactic string := 
+meta def dump_all : tactic format := 
 do l ← gen_thm,
-   return (to_fmt (list.map (λ e : name × expr, (e.1, form_of_expr e.2)) l)).to_string
+   let f := λ e : name × expr, (e.1, e.2, form_of_expr e.2) in do
+   tactic.pp $ list.map f $ l >>= return
 
--- run_cmd dump 2 >>= write_string
+-- run_cmd dump 2 >>= trace
 
--- run_cmd dump_all >>= write_string
+-- run_cmd dump_all >>= trace
