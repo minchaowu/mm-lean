@@ -12,8 +12,8 @@ do env ← get_env,
      | _ := l
     end)
 
--- meta def write_string (s : string) : tactic unit :=
--- unsafe_run_io $ @write_file "temp.txt" s io.mode.write
+meta def write_string (s : string) : tactic unit :=
+unsafe_run_io $ @write_file "temp.txt" s io.mode.write
 
 meta def dump (n : ℕ) : tactic format := 
 do l ← gen_thm,
@@ -25,6 +25,20 @@ do l ← gen_thm,
    let f := λ e : name × expr, (e.1, e.2, form_of_expr e.2) in do
    tactic.pp $ list.map f $ l >>= return
 
+
+/- save the buffer manually -/
+
 -- run_cmd dump 2 >>= trace
 
 -- run_cmd dump_all >>= trace
+
+
+/- dump with writing to files -/
+
+-- run_cmd do 
+-- d ← dump 2,
+-- write_string d.to_string
+
+-- run_cmd do 
+-- d ← dump_all,
+-- write_string d.to_string
