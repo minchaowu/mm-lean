@@ -1,3 +1,4 @@
+import data.set.basic
 open tactic expr
 
 /-
@@ -115,9 +116,6 @@ end
 
 meta def is_interesting (n : name) : bool :=
 bnot (is_recursor n || is_boring n)
-
-meta def name_set.filter (s : name_set) (P : name → bool) : name_set :=
-s.fold s (λ v s', if P v then s' else s'.erase v)
 
 meta def get_interesting_consts (e : expr) : tactic name_set :=
 do ns ← name_set.of_list <$> list_prop_consts e,

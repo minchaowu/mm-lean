@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux mathematica data.set.basic lambda extract_consts
+import system.io provers.ljt provers.tableaux mathematica lambda extract_consts
 -- _target.deps.relevance_filter.k_nn
 open tactic expr io mathematica name task mmexpr
 
