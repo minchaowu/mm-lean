@@ -19,7 +19,7 @@ if b then do e₁ ← mk_app `and.left [e],
      else return ()
 
 meta def split_conjs : tactic unit :=
-do ctx ← local_context, list.mfor ctx split_conjs_at, return ()
+do ctx ← local_context, list.mmap split_conjs_at ctx, return ()
 
 meta def find_disj : tactic (option expr) :=
 do ctx ← local_context,

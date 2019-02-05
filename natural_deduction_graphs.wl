@@ -288,10 +288,9 @@ LeanForm[LeanPi[nm_, bi_, tp_, bd_], v_] :=
 FoldApps[f_, {}] := f
 FoldApps[f_, vs_] := FoldApps[f[First[vs]], Rest[vs]]
 
-ProveForDiagram[p_]:=RunLeanTactic[p, "prove_mm_prop_fml", True]
+ProveForDiagram[p_,pa_]:=RunLeanTactic[p, "prove_mm_prop_fml", pa, True]
 
-DiagramOfFormula[p_, vs_] := Graph[
- ProofToGraph[FoldApps[ProveForDiagram[p] // ToExpression // LeanForm, vs], {}],
+DiagramOfFormula[p_, vs_,pa_] := Graph[ProofToGraph[FoldApps[ProveForDiagram[p,pa] // ToExpression // LeanForm, vs], {}],
  $ProofGraphStyle
 ];
 

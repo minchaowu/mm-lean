@@ -1,17 +1,6 @@
 import mathematica
 open expr tactic classical
 
--- namespace list
--- variables {α β : Type} 
--- universes u v w
-
--- -- def for : list α → (α → β) → list β := flip map
-
--- def mfor {m : Type u → Type v} [monad m] {α : Type w} {β : Type u} (l : list α) (f : α → m β) : m (list β) :=
--- mmap f l
-
--- end list
-
 section logical_equivalences
   local attribute [instance] prop_decidable
   variables {a b : Prop}
@@ -202,4 +191,4 @@ do h₁ ← nnf_at h,
 
 meta def nnf_hyps : tactic unit :=
 do hyps ← local_context,
-list.mfor hyps nnf_at >> return ()
+list.mmap nnf_at hyps >> return ()

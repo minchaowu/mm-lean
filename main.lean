@@ -8,7 +8,6 @@ import system.io provers.ljt provers.tableaux mathematica lambda extract_consts
 -- _target.deps.relevance_filter.k_nn
 open tactic expr io mathematica name task mmexpr
 
-
 @[simp]
 lemma set_distrib_right {α} (s t u : set α) : s ∩ (t ∪ u) = (s ∩ t) ∪ (s ∩ u) :=
 set.ext $ λ v, 

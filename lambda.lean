@@ -45,12 +45,12 @@ end⟩
 @[app_to_pexpr_keyed]
 meta def tuple_to_pexpr : app_trans_pexpr_keyed_rule :=
 ⟨"Tuple", 
-λ env args, do args' ← list.mfor args (pexpr_of_mmexpr env), return $ pexpr_fold_op ``(()) ``(prod.mk) args'⟩
+λ env args, do args' ← list.mmap (pexpr_of_mmexpr env) args, return $ pexpr_fold_op ``(()) ``(prod.mk) args'⟩
 
 @[app_to_pexpr_keyed]
 meta def prod_to_pexpr : app_trans_pexpr_keyed_rule :=
 ⟨"ProductType", 
-λ env args, do args' ← list.mfor args (pexpr_of_mmexpr env), return $ pexpr_fold_op ``(()) ``(prod) args'⟩
+λ env args, do args' ← list.mmap (pexpr_of_mmexpr env) args, return $ pexpr_fold_op ``(()) ``(prod) args'⟩
 
 @[app_to_pexpr_keyed]
 meta def arrow_to_pexpr : app_trans_pexpr_keyed_rule :=

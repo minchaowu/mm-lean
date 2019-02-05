@@ -12,6 +12,7 @@ do env ← get_env,
      | _ := l
     end)
 
+-- todo: rewrite this using get_decl
 meta def gen_thm_by_name (ln : list name) : tactic $ list (name × expr) :=
 do env ← get_env,
    return $ env.fold [] 
@@ -53,7 +54,7 @@ def thms := ["add_comm",
              "add_assoc", 
              "nat.lt_add_left"]
 
--- run_cmd dump_search thms >>= trace
+run_cmd dump_search thms >>= trace
 
 
 /- dump with writing to files -/
