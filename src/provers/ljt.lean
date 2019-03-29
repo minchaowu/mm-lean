@@ -1,5 +1,5 @@
 import .utils
-open tactic expr
+open tactic expr util
 
 /- the intuitionitsic prover -/
 
@@ -37,7 +37,7 @@ match t with
      | `(%%c ∧ %%d) :=
        do e ← mk_mapp ``uncurry [some c, some d, some b, pr],
           t ← to_expr ``(%%c → (%%d → %%b)),
-          assertv_fresh t e,
+          util.assertv_fresh t e,
           return tt
      | _ := return ff
      end

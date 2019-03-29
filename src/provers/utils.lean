@@ -82,7 +82,7 @@ def ljt_lemmas := [`imp_of_or_imp_left,
                    `absurd]
 
 /- some generally useful things -/
-
+namespace util
 def {u} list.first {α : Type u} (l : list α) (p : α → Prop) [decidable_pred p] : option α :=
 list.rec_on l none (λ h hs recval, if p h then some h else recval)
 
@@ -192,3 +192,4 @@ do h₁ ← nnf_at h,
 meta def nnf_hyps : tactic unit :=
 do hyps ← local_context,
 list.mmap nnf_at hyps >> return ()
+end util
