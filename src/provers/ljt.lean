@@ -104,8 +104,8 @@ do t ← target,
    (local_context >>= elim_nested_imp cont)
 
 meta def intuit : tactic unit :=
-do finish <|> try `[constructor] >> repeat 
-   (apply_nonsplitting_rules >>
+do finish <|> 
+   (apply_nonsplitting_rules >> trace "en" >>
      (finish <|>
        apply_splitting_rule >>
          (intuit >> intuit) <|>
