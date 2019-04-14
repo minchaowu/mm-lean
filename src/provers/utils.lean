@@ -86,10 +86,6 @@ def ljt_lemmas := [`imp_of_or_imp_left,
 def {u} list.first {α : Type u} (l : list α) (p : α → Prop) [decidable_pred p] : option α :=
 list.rec_on l none (λ h hs recval, if p h then some h else recval)
 
-meta def assertv_fresh (t : expr) (v : expr) : tactic unit :=
-do n ← get_unused_name `h none,
-   assertv n t v >> return ()
-
 meta def intro_fresh : tactic expr :=
 get_unused_name `h none >>= intro
 

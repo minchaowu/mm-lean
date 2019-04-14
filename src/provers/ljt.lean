@@ -1,4 +1,4 @@
-import .utils
+import .utils tactic.finish
 open tactic expr
 
 /- the intuitionitsic prover -/
@@ -7,7 +7,7 @@ open tactic expr
 -- and returns tt if anything nontrivial has been added.
 meta def add_consequences : expr → expr → tactic bool :=
 λ pr t,
-let assert_consequences := λ e t, mcond (add_consequences e t) skip (assertv_fresh t e) in
+let assert_consequences := λ e t, mcond (add_consequences e t) skip (assertv_fresh t e >> pure ()) in
 match t with
 | `(¬ %%a) :=
   do e ← mk_mapp ``imp_false_of_not [some a, some pr],
@@ -104,12 +104,12 @@ do t ← target,
    (local_context >>= elim_nested_imp cont)
 
 meta def intuit : tactic unit :=
-do finish <|>
-   apply_nonsplitting_rules >>
+do finish <|> try `[constructor] >> repeat 
+   (apply_nonsplitting_rules >>
      (finish <|>
        apply_splitting_rule >>
          (intuit >> intuit) <|>
-         (apply_backtracking_rule intuit))
+         (apply_backtracking_rule intuit)))
 
 meta def glivenko : tactic unit :=
 do repeat (intro_fresh >> skip), deny_conclusion, intuit
