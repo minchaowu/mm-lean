@@ -105,7 +105,7 @@ do t ← target,
 
 meta def intuit : tactic unit :=
 do finish <|> 
-   (apply_nonsplitting_rules >> trace "en" >>
+   (apply_nonsplitting_rules >>
      (finish <|>
        apply_splitting_rule >>
          (intuit >> intuit) <|>
