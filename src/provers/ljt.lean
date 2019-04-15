@@ -85,7 +85,7 @@ meta def find_hyp (p : expr → bool) : tactic expr :=
 do local_context >>= find_hyp_aux p
 
 meta def apply_splitting_rule : tactic unit :=
-(applyc ``and.intro) <|>
+(applyc ``and.intro) <|> (applyc ``iff.intro) <|>
 (do h ← find_hyp (λ e, is_app_of e `or),
     e ← to_expr ``(or.elim %%h),
     apply e >> clear h)
