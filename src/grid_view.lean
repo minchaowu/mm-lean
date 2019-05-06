@@ -64,7 +64,7 @@ meta def unfold_proof (es : entries) : tactic string :=
 let concl := lookup_lines es (es.l.length - 1) in 
 unfold_proof_aux es concl
 
-open interactive lean lean.parser interaction_monad.result
+open interactive lean lean.parser
 
 @[user_command]
 meta def explode_mm_cmd (_ : parse $ tk "#explode_mm") : lean.parser unit :=
