@@ -26,4 +26,4 @@ SetAttributes[ProveUsingLeanTactic, HoldFirst];
 SetAttributes[ProveInteractively, HoldFirst];
 SetAttributes[SelectLeanPremises, HoldFirst];
 
-LeanProof[t_String, exe_String]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["#grid_view `1`", t]; WriteString[s, "import grid_view", "\n", "open tactic.interactive", "\n", cmd]; Close[s]; Import[exe <> " temp.lean", "Text"] // ToExpression];
+LeanProof[t_String, exe_String]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["#grid_view `1`", t]; WriteString[s, "import grid_view", "\n", "set_option pp.beta true", "\n", "open tactic.interactive", "\n", cmd]; Close[s]; Import[exe <> " temp.lean", "Text"] // ToExpression];
