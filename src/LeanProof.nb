@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    237094,       4977]
-NotebookOptionsPosition[    235422,       4941]
-NotebookOutlinePosition[    235755,       4956]
-CellTagsIndexPosition[    235712,       4953]
+NotebookDataLength[    237136,       4978]
+NotebookOptionsPosition[    235464,       4942]
+NotebookOutlinePosition[    235797,       4957]
+CellTagsIndexPosition[    235754,       4954]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,12 +57,11 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"SetDirectory", "[", "\"\</home/minchao/proj/lean/mm_lean/src/\>\"", 
-  "]"}]], "Input",
+ RowBox[{"SetDirectory", "[", "\"\<...mm_lean/src/\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.780798313465518*^9, 3.78079831397092*^9}, {
-  3.7807983625464783`*^9, 3.780798367263343*^9}},
- NumberMarks->False,
- CellLabel->"In[3]:=",ExpressionUUID->"0e600f33-c4d8-43ae-953b-4166b2dbe04e"],
+  3.7807983625464783`*^9, 3.780798367263343*^9}, {3.780799267268783*^9, 
+  3.780799277078808*^9}},
+ NumberMarks->False,ExpressionUUID->"0e600f33-c4d8-43ae-953b-4166b2dbe04e"],
 
 Cell[BoxData["\<\"/home/minchao/proj/lean/mm_lean/src\"\>"], "Output",
  CellChangeTimes->{3.780798367803282*^9, 3.7807989426823883`*^9},
@@ -106,8 +105,9 @@ Cell[BoxData[
               Evaluator -> Automatic, Method -> "Preemptive"], 
              Alignment -> {Center, Center}, ImageSize -> 
              Dynamic[{
-               Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                AbsoluteCurrentValue[Magnification]}]], 
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
             GridBox[{{
                RowBox[{
                  TagBox["\"Program: \"", "SummaryItemAnnotation"], 
@@ -138,8 +138,9 @@ Cell[BoxData[
               Evaluator -> Automatic, Method -> "Preemptive"], 
              Alignment -> {Center, Center}, ImageSize -> 
              Dynamic[{
-               Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                AbsoluteCurrentValue[Magnification]}]], 
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
             GridBox[{{
                RowBox[{
                  TagBox["\"Program: \"", "SummaryItemAnnotation"], 
@@ -4962,23 +4963,23 @@ Cell[1113, 39, 253, 3, 35, "Output",ExpressionUUID->"0f063a29-fea1-4d66-92df-115
 }, Open  ]],
 Cell[1381, 45, 329, 9, 31, "Input",ExpressionUUID->"6677c453-64a6-4f46-98c5-59de4101cd22"],
 Cell[CellGroupData[{
-Cell[1735, 58, 326, 6, 31, "Input",ExpressionUUID->"0e600f33-c4d8-43ae-953b-4166b2dbe04e"],
-Cell[2064, 66, 214, 2, 35, "Output",ExpressionUUID->"436c21d7-b329-425d-a85e-69914ca5863f"]
+Cell[1735, 58, 328, 5, 31, "Input",ExpressionUUID->"0e600f33-c4d8-43ae-953b-4166b2dbe04e"],
+Cell[2066, 65, 214, 2, 35, "Output",ExpressionUUID->"436c21d7-b329-425d-a85e-69914ca5863f"]
 }, Open  ]],
-Cell[2293, 71, 220, 4, 31, "Input",ExpressionUUID->"3d3c020a-c399-4ac9-850b-6a200b89dac3"],
+Cell[2295, 70, 220, 4, 31, "Input",ExpressionUUID->"3d3c020a-c399-4ac9-850b-6a200b89dac3"],
 Cell[CellGroupData[{
-Cell[2538, 79, 627, 10, 31, "Input",ExpressionUUID->"bff7d237-7b23-4503-8ea8-a38367ef8b1f"],
-Cell[3168, 91, 7586, 161, 67, "Output",ExpressionUUID->"29966f2d-1351-46ea-8b9e-9f25f3029990"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[10791, 257, 144, 2, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
-Cell[10938, 261, 330, 4, 35, "Output",ExpressionUUID->"26f5c358-2219-4fd4-8339-8e6da6d075a8"]
+Cell[2540, 78, 627, 10, 31, "Input",ExpressionUUID->"bff7d237-7b23-4503-8ea8-a38367ef8b1f"],
+Cell[3170, 90, 7626, 163, 67, "Output",ExpressionUUID->"29966f2d-1351-46ea-8b9e-9f25f3029990"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11305, 270, 944, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
-Cell[12252, 286, 223007, 4648, 104, "Output",ExpressionUUID->"6a46b7e9-d7c8-4c47-8e2d-efc74f35d6cd"]
+Cell[10833, 258, 144, 2, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
+Cell[10980, 262, 330, 4, 35, "Output",ExpressionUUID->"26f5c358-2219-4fd4-8339-8e6da6d075a8"]
 }, Open  ]],
-Cell[235274, 4937, 144, 2, 64, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
+Cell[CellGroupData[{
+Cell[11347, 271, 944, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
+Cell[12294, 287, 223007, 4648, 104, "Output",ExpressionUUID->"6a46b7e9-d7c8-4c47-8e2d-efc74f35d6cd"]
+}, Open  ]],
+Cell[235316, 4938, 144, 2, 31, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
 }
 ]
 *)
