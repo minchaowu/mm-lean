@@ -26,4 +26,32 @@ SetAttributes[ProveUsingLeanTactic, HoldFirst];
 SetAttributes[ProveInteractively, HoldFirst];
 SetAttributes[SelectLeanPremises, HoldFirst];
 
-LeanProof[t_String, exe_String]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["#grid_view `1`", t]; WriteString[s, "import grid_view", "\n", "set_option pp.beta true", "\n", "open tactic.interactive", "\n", cmd]; Close[s]; Import[exe <> " temp.lean", "Text"] // ToExpression];
+cache = "";
+
+HandleLeanServerResponse[p_ProcessObject] := 
+ Module[{msg, line, flag, res}, flag = True; msg = "error"; 
+  While[flag, line = ImportString[ReadLine[p], "JSON"]; 
+   If[("response" /. line) == "all_messages", flag = True; 
+    msg = ("msgs" /. line), 
+    If[("response" /. line) == "ok" && ("message" /. line) == 
+       "file unchanged", msg = cache]; flag = False]]; cache = msg; 
+  msg];
+
+SendToLeanServer[name_String] := 
+ Module[{cmd}, 
+  cmd = StringForm[
+    "{\"seq_num\":0, \"command\":\"sync\", \"file_name\": \
+\"dummy.lean\", \"content\":\"import grid_view set_option pp.beta \
+true open tactic.interactive #grid_view ``\"}", name]; 
+  WriteLine[p, cmd // ToString]];
+
+LeanMode[] := 
+ StartProcess[{LeanExecutable, "-j0", "-D pp.unicode=true", 
+	       "--server"}];
+
+GetLeanProof[p_ProcessObject, name_String] := 
+ Module[{res}, SendToLeanServer[name]; 
+  res = HandleLeanServerResponse[p]; ("text" /. res[[1]]) // 
+				     ToExpression];
+
+QuitLeanMode[p_ProcessObject] := KillProcess[p];
