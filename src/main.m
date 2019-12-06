@@ -37,16 +37,15 @@ HandleLeanServerResponse[p_ProcessObject] :=
        "file unchanged", msg = cache]; flag = False]]; cache = msg; 
   msg];
 
-SendToLeanServer[name_String] := 
- Module[{cmd}, 
+SendToLeanServer[name_String] :=
+ Module[{cmd},
   cmd = StringForm[
     "{\"seq_num\":0, \"command\":\"sync\", \"file_name\": \
-\"dummy.lean\", \"content\":\"import grid_view set_option pp.beta \
-true open tactic.interactive #grid_view ``\"}", name]; 
+\"dummy.lean\", \"content\":\"import grid_view import imports set_option pp.beta true open tactic.interactive #grid_view ``\"}", name];
   WriteLine[p, cmd // ToString]];
 
-LeanMode[] := 
- StartProcess[{LeanExecutable, "-j0", "-D pp.unicode=true", 
+LeanMode[] :=
+ StartProcess[{LeanExecutable, "-j0", "-D pp.unicode=true",
 	       "--server"}];
 
 GetLeanProof[p_ProcessObject, name_String] := 
