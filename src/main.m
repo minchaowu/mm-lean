@@ -37,7 +37,7 @@ HandleLeanServerResponse[p_ProcessObject] :=
        "file unchanged", msg = cache]; flag = False]]; cache = msg; 
   msg];
 
-SendToLeanServer[name_String] :=
+SendToLeanServer[p_ProcessObject, name_String] :=
  Module[{cmd},
   cmd = StringForm[
     "{\"seq_num\":0, \"command\":\"sync\", \"file_name\": \
@@ -49,7 +49,7 @@ LeanMode[] :=
 	       "--server"}];
 
 GetLeanProof[p_ProcessObject, name_String] := 
- Module[{res}, SendToLeanServer[name]; 
+ Module[{res}, SendToLeanServer[p, name]; 
   res = HandleLeanServerResponse[p]; ("text" /. res[[1]]) // 
 				     ToExpression];
 
