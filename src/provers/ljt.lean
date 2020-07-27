@@ -7,7 +7,7 @@ open tactic expr
 -- and returns tt if anything nontrivial has been added.
 meta def add_consequences : expr → expr → tactic bool :=
 λ pr t,
-let assert_consequences := λ e t, mcond (add_consequences e t) skip (assertv_fresh t e >> pure ()) in
+let assert_consequences := λ e t, mcond (add_consequences e t) skip (note_anon t e >> pure ()) in
 match t with
 | `(¬ %%a) :=
   do e ← mk_mapp ``imp_false_of_not [some a, some pr],
@@ -37,7 +37,7 @@ match t with
      | `(%%c ∧ %%d) :=
        do e ← mk_mapp ``uncurry [some c, some d, some b, pr],
           t ← to_expr ``(%%c → (%%d → %%b)),
-          assertv_fresh t e,
+          note_anon t e,
           return tt
      | _ := return ff
      end
