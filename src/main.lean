@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux mathematica lambda extract_consts
+import system.io provers.ljt provers.tableaux mathematica lambda extract_consts grid_view
 -- _target.deps.relevance_filter.k_nn
 open tactic expr io mathematica name task mmexpr
 
@@ -52,10 +52,18 @@ meta def translate (mm_fml : string) : tactic string :=
 do f ← preprocess mm_fml >>= pp,
    return f.to_string
 
-meta def prove_using_tac (tac : tactic unit) (mm_fml  : string) (b := ff) : tactic string :=
+meta def prove_using_tac (tac : tactic unit) (mm_fml : string) (b := ff) : tactic string :=
 (do e ← preprocess mm_fml,
     (_, pf) ← tactic.solve_fully_aux e tac, 
     return $ if b then form_of_expr pf else pf.to_string) 
+<|> return "failed"
+
+meta def prove_using_tac_with_grid_view (tac : tactic unit) (mm_fml : string) (b := ff) : tactic string :=
+(do e ← preprocess mm_fml,
+    (_, pf) ← tactic.solve_fully_aux e tac, 
+    es ← explode_expr pf tt,
+    s ← unfold_proof es,
+    return $ if b then s else pf.to_string) 
 <|> return "failed"
 
 meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
@@ -90,3 +98,5 @@ do e ← preprocess mm_fml,
    s ← simp_lemmas.mk_default,
    pt ← simplify s [] e {fail_if_unchanged := ff} `eq failed,
    print_lemmas_used pt.2
+
+
