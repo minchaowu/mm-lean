@@ -100,3 +100,5 @@ do e ← preprocess mm_fml,
    print_lemmas_used pt.2
 
 
+meta def print_translation (mm_fml : string) (b := ff) : tactic string :=
+do e ← preprocess mm_fml >>= pp, return e.to_string

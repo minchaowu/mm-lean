@@ -6,11 +6,11 @@ OutputFormat[h_[args___]] :=
     StringRiffle[Apply[List, Map[OutputFormat, Hold[args]]], ","] <> 
   "]"
   
-RunLeanTactic[x_, t_String, p_String, b_?BooleanQ, i_?StringQ]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, StringForm["import main `1`", i], "\n", cmd]; Close[s];RunThrough[p <> " temp.lean",0];Import["temp.txt", CharacterEncoding -> "UTF8"]];
+(* RunLeanTactic[x_, t_String, p_String, b_?BooleanQ, i_?StringQ]:=Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd `1` \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, StringForm["import main `1`", i], "\n", cmd]; Close[s];RunThrough[p <> " temp.lean",0];Import["temp.txt", CharacterEncoding -> "UTF8"]]; *)
 
-RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,False,""]
-RunLeanTactic[x_,t_,p_,b_?BooleanQ] := RunLeanTactic[x,t,p,b,""]
-RunLeanTactic[x_,t_,p_,i_String] := RunLeanTactic[x,t,p,False,i]
+(* RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,False,""] *)
+(* RunLeanTactic[x_,t_,p_,b_?BooleanQ] := RunLeanTactic[x,t,p,b,""] *)
+(* RunLeanTactic[x_,t_,p_,i_String] := RunLeanTactic[x,t,p,False,i] *)
 
 (* ProveUsingLeanTactic[x_, t_String, p_String, b_?BooleanQ] := Module[{s,cmd}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd prove_using_tac (`1`) \"`2`\" `3` >>= write_string",t,x // OutputFormat, If[b, "tt", "ff"]]; WriteString[s, "import main", "\n", cmd]; Close[s];RunThrough[p <> " temp.lean",0];Import["temp.txt", CharacterEncoding -> "UTF8"]]; *)
 
@@ -21,7 +21,6 @@ ProveInteractively[e_] := Module[{s,t,cmd,ts}, s=OpenWrite["temp.lean", Characte
 SelectLeanPremises[e_] := RunLeanTactic[e, "find_relevant_facts", "premise_selection"]
 
 SetAttributes[OutputFormat, HoldFirst];
-SetAttributes[RunLeanTactic, HoldFirst];
 (* SetAttributes[ProveUsingLeanTactic, HoldFirst]; *)
 SetAttributes[ProveInteractively, HoldFirst];
 SetAttributes[SelectLeanPremises, HoldFirst];
@@ -62,6 +61,24 @@ ProveUsingLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ] :=
 
 ProveUsingLeanTactic[p_,x_,t_] := ProveUsingLeanTactic[p,x,t,False]
 
+RunLeanTactic[p_ProcessObject, x_, t_String, i_?StringQ] :=
+	Module[{res, content},
+	       content = StringForm["import main `1` run_cmd `2` \\\"`3`\\\" >>= tactic.trace",i,t,x // OutputFormat];
+	       SendToLeanServer[p, content // ToString];
+	       res = HandleLeanServerResponse[p];("text" /. res[[1]])];
+
+RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,""]
+
+(* RunLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ, i_?StringQ] := *)
+(* 	Module[{res, content}, *)
+(* 	       content = StringForm["import main `1` run_cmd `2` \\\"`3`\\\" `4` >>= tactic.trace",i,t,x // OutputFormat, If[b, "tt", "ff"]]; *)
+(* 	       SendToLeanServer[p, content // ToString]; *)
+(* 	       res = HandleLeanServerResponse[p]; If[b, ("text" /. res[[1]]) // ToExpression, ("text" /. res[[1]])]]; *)
+
+(* RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,False,""] *)
+(* RunLeanTactic[x_,t_,p_,b_?BooleanQ] := RunLeanTactic[x,t,p,b,""] *)
+(* RunLeanTactic[x_,t_,p_,i_String] := RunLeanTactic[x,t,p,False,i] *)
+SetAttributes[RunLeanTactic, HoldRest];
 SetAttributes[ProveUsingLeanTactic, HoldRest];
 
 QuitLeanMode[p_ProcessObject] := KillProcess[p];

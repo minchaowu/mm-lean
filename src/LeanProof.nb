@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    893108,      18873]
-NotebookOptionsPosition[    890519,      18823]
-NotebookOutlinePosition[    890853,      18838]
-CellTagsIndexPosition[    890810,      18835]
+NotebookDataLength[    945744,      20005]
+NotebookOptionsPosition[    942920,      19951]
+NotebookOutlinePosition[    943254,      19966]
+CellTagsIndexPosition[    943211,      19963]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -108,7 +108,7 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["23368", "SummaryItem"]}]}}, 
+                 TagBox["9453", "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -140,11 +140,11 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["23368", "SummaryItem"]}]}, {
+                 TagBox["9453", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["23150", "SummaryItem"]}]}, {
+                 TagBox["9235", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"User: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -161,7 +161,7 @@ Cell[BoxData[
                  TagBox[
                   
                   TemplateBox[{
-                   "8.433664`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
+                   "8.372224`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
@@ -172,7 +172,7 @@ Cell[BoxData[
                  "\[InvisibleSpace]", 
                  TagBox[
                   TemplateBox[{
-                    RowBox[{"\"Tue 18 Aug 2020 05:29:46\"", 
+                    RowBox[{"\"Wed 5 Aug 2020 23:45:25\"", 
                     StyleBox[
                     RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
                     StyleBox[
@@ -183,8 +183,8 @@ Cell[BoxData[
                     RowBox[{"{", 
                     
                     RowBox[{
-                    "2020", ",", "8", ",", "18", ",", "5", ",", "29", ",", 
-                    "46.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
+                    "2020", ",", "8", ",", "5", ",", "23", ",", "45", ",", 
+                    "25.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
                      ",", "10.`"}], "]"}]}, "DateObject", Editable -> False], 
                   "SummaryItem"]}]}, {
                RowBox[{
@@ -207,7 +207,7 @@ Cell[BoxData[
                  TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
-                  TemplateBox[{"16", "15", "57.`5.", 
+                  TemplateBox[{"22", "39", "54.`5.", 
                     RowBox[{"\[ThinSpace]", "\"h\""}], 
                     RowBox[{"\[ThinSpace]", "\"min\""}], 
                     RowBox[{"\[ThinSpace]", "\"s\""}], 
@@ -234,9 +234,9 @@ Cell[BoxData[
     DynamicModuleValues:>{}], "]"}],
   ProcessObject[
    Association[
-   "ManagedProcess" -> True, "UID" -> 0, "PID" -> 23368, "PPID" -> 23150, 
+   "ManagedProcess" -> True, "UID" -> 0, "PID" -> 9453, "PPID" -> 9235, 
     "Program" -> "lean", "Path" -> "/home/minchao/.elan/bin/lean", "User" -> 
-    "minchao", "StartTime" -> 1597692586]],
+    "minchao", "StartTime" -> 1596635125]],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
@@ -245,8 +245,8 @@ Cell[BoxData[
   3.805179927576661*^9, 3.805180047579234*^9, 3.80518013894178*^9, 
   3.8051815659010677`*^9, 3.805181897388094*^9, 3.805183098957262*^9, 
   3.805183639065048*^9, 3.805183903403364*^9, 3.805184489149942*^9, 
-  3.805184743435124*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"708e5987-f85f-4800-911c-b2bc979668f2"]
+  3.805184743435124*^9, 3.8052730138742743`*^9, 3.805273519701531*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"db702086-ae9b-44ef-b34f-c10caf0312f9"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -286,7 +286,7 @@ JboU3kXwckRO3JmTVcPlxmGiMYXTA9tZQmLKo0ML54M4Omi/7xmCJfmjxCh+
 8R9kJ1cSd7kVzXm0JmkD8Tm3sBUG6tZUsCassxO+vzmJF+zHXqgXfBIbH9Jl
 87ReGnEhPK1jxVlpSyllPBzwdWwe04b8fBP/AVHT/wo=
   "],
- CellLabel->"In[6]:=",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
+ CellLabel->"In[5]:=",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -2951,8 +2951,8 @@ GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
  CellChangeTimes->{3.8051773574751883`*^9, 3.805179274157055*^9, 
   3.805179373890008*^9, 3.805179425989846*^9, 3.80517993349507*^9, 
   3.805180052260253*^9, 3.805181570345108*^9, 3.805181902058371*^9, 
-  3.805183103705029*^9, 3.80518364388335*^9},
- CellLabel->"Out[6]=",ExpressionUUID->"b1f21e33-0a53-4b2d-822e-fdaff29b11ed"]
+  3.805183103705029*^9, 3.80518364388335*^9, 3.805273536855113*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"83cf5bec-d936-423f-bb62-692dc0da71e3"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2964,7 +2964,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.805172154373012*^9, 3.805172177963478*^9}, {
   3.805172812220764*^9, 3.8051728195506363`*^9}, {3.8051793373744583`*^9, 
   3.8051793386168613`*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
+ CellLabel->"In[6]:=",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -6550,8 +6550,8 @@ GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
 GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
 "Grid"]], "Output",
  CellChangeTimes->{{3.805177366525826*^9, 3.8051773742368183`*^9}, 
-   3.805179376217513*^9},
- CellLabel->"Out[17]=",ExpressionUUID->"a36153a6-cd36-4846-885d-8e571bed9bc8"]
+   3.805179376217513*^9, 3.805273539739832*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"5cbbfc68-1c30-445b-9797-bcbe67baf0bd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -6564,7 +6564,7 @@ Cell[BoxData[
   3.805172356599527*^9, 3.805172357037291*^9}, {3.8051725811124163`*^9, 
   3.805172581744677*^9}, {3.805173242262375*^9, 3.805173252998361*^9}, {
   3.805179342364896*^9, 3.8051793432380743`*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
+ CellLabel->"In[7]:=",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -10562,8 +10562,8 @@ GridBoxBackground->{"Columns" -> {
 GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
 GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
 "Grid"]], "Output",
- CellChangeTimes->{3.80517738191472*^9, 3.8051793784401283`*^9},
- CellLabel->"Out[18]=",ExpressionUUID->"13e59c45-4757-476e-983e-84757e97814b"]
+ CellChangeTimes->{3.805273545623577*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"1e503838-2bca-4930-8ca0-350c9ef12bb2"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -10573,7 +10573,7 @@ Cell[BoxData[
   RowBox[{"Lean", ",", "\"\<Set.singleton_inj\>\""}], "]"}]], "Input",
  CellChangeTimes->{{3.8051732958249598`*^9, 3.8051732992662487`*^9}, {
   3.805179347110087*^9, 3.805179348035297*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
+ CellLabel->"In[8]:=",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -11963,8 +11963,8 @@ x = y\"\>"},
    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.8051773882016907`*^9, 3.805179381276978*^9},
- CellLabel->"Out[19]=",ExpressionUUID->"c2d39942-9deb-4980-b9d4-c1c20e9aa783"]
+ CellChangeTimes->{3.805273553686541*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"c9778f9f-96a8-42aa-a9f5-f1db91c81920"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -11974,7 +11974,7 @@ Cell[BoxData[
   RowBox[{"Lean", ",", "\"\<Set.regularity\>\""}], "]"}]], "Input",
  CellChangeTimes->{{3.805173270287466*^9, 3.8051732803391743`*^9}, {
   3.80517935172017*^9, 3.8051793526794233`*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
+ CellLabel->"In[9]:=",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -18772,8 +18772,8 @@ GridBoxBackground->{"Columns" -> {
 GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
 GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
 "Grid"]], "Output",
- CellChangeTimes->{3.805177395283682*^9, 3.805179383426484*^9},
- CellLabel->"Out[20]=",ExpressionUUID->"9a00b9f4-2ddc-4560-b253-2d97da6baa56"]
+ CellChangeTimes->{3.805273558988542*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"15d25bef-4484-4b49-a369-b8e1f64adf93"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -18795,7 +18795,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"And", "[", 
           RowBox[{"p", ",", "q"}], "]"}], ",", "r"}], "]"}]}], "]"}]}], "]"}],
-    ",", "\"\<mm_prover\>\""}], "]"}]], "Input",
+    ",", "\"\<mm_prover\>\"", ",", " ", "True"}], "]"}]], "Input",
  CellChangeTimes->{{3.805179143365593*^9, 3.805179198134095*^9}, {
   3.80517923973461*^9, 3.805179248961309*^9}, {3.805179284223929*^9, 
   3.805179284968464*^9}, {3.8051793562116327`*^9, 3.805179357104827*^9}, {
@@ -18804,22 +18804,1150 @@ Cell[BoxData[
   3.8051831934909153`*^9, 3.805183195538686*^9}, {3.805183340393325*^9, 
   3.805183340998559*^9}, {3.805183938935348*^9, 3.805183940855002*^9}, {
   3.805184495996064*^9, 3.805184509567741*^9}, {3.805184749019628*^9, 
-  3.8051847758541203`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
+  3.8051847758541203`*^9}, {3.8052735027431707`*^9, 3.805273507022134*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
 
-Cell[BoxData["\<\"fun (h : Prop) (h_1 : Prop) (h_2 : Prop) (h_3 : h -> h_1 -> \
-h_2) (h_4 : and h h_1), (h_3 (and.left h h_1 h_4) (and.right h h_1 h_4))\\n\"\
-\>"], "Output",
- CellChangeTimes->{{3.8051839068369837`*^9, 3.805183941375462*^9}, {
-  3.805184504056879*^9, 3.805184510263836*^9}, {3.805184750923161*^9, 
-  3.805184777968074*^9}},
- CellLabel->"Out[8]=",ExpressionUUID->"a049e2b0-c4d8-4b64-ad0d-b21d211fe1c9"]
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"Goal", "\<\"\[ForAll] (h h_1 h_2 : Prop), (h \[RightArrow] h_1 \
+\[RightArrow] h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2\"\>"},
+    {"ID", "12"},
+    {"Rule", "\<\"\[ForAll]I\"\>"},
+    {"Proofs", 
+     TagBox[
+      DynamicModuleBox[{Typeset`var$$ = False}, 
+       InterpretationBox[
+        StyleBox[
+         PaneSelectorBox[{False->GridBox[{
+            {
+             OpenerBox[Dynamic[Typeset`var$$],
+              Appearance->Automatic,
+              AutoAction->False,
+              ContinuousAction->False,
+              Enabled->Automatic], "Arguments"}
+           },
+           AutoDelete->False,
+           BaselinePosition->{1, 1},
+           GridBoxAlignment->{"Columns" -> {{Left}}},
+           GridBoxBackground->{"Columns" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], True->
+          GridBox[{
+            {
+             OpenerBox[Dynamic[Typeset`var$$],
+              Appearance->Automatic,
+              AutoAction->False,
+              ContinuousAction->False,
+              Enabled->Automatic], "Arguments"},
+            {"", 
+             PaneBox[
+              TagBox[GridBox[{
+                 {
+                  TagBox[GridBox[{
+                    {"Goal", "\<\"h : Prop\"\>"},
+                    {"ID", "0"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Grid"]},
+                 {
+                  TagBox[GridBox[{
+                    {
+                    "Goal", "\<\"\[ForAll] (h_1 h_2 : Prop), (h \[RightArrow] \
+h_1 \[RightArrow] h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2\"\>"},
+                    {"ID", "11"},
+                    {"Rule", "\<\"\[ForAll]I\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], True->
+                    GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_1 : Prop\"\>"},
+                    {"ID", "1"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {
+                    "Goal", "\<\"\[ForAll] (h_2 : Prop), (h \[RightArrow] h_1 \
+\[RightArrow] h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2\"\>"},
+                    {"ID", "10"},
+                    {"Rule", "\<\"\[ForAll]I\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}], True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_2 : Prop\"\>"},
+                    {"ID", "2"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {
+                    "Goal", "\<\"(h \[RightArrow] h_1 \[RightArrow] h_2) \
+\[RightArrow] h \[And] h_1 \[RightArrow] h_2\"\>"},
+                    {"ID", "9"},
+                    {"Rule", "\<\"\[ForAll]I\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}], True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {
+                    "Goal", "\<\"h_3 : h \[RightArrow] h_1 \[RightArrow] \
+h_2\"\>"},
+                    {"ID", "3"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h \[And] h_1 \[RightArrow] h_2\"\>"},
+                    {"ID", "8"},
+                    {"Rule", "\<\"\[ForAll]I\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}], True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_4 : h \[And] h_1\"\>"},
+                    {"ID", "4"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                    Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_2\"\>"},
+                    {"ID", "7"},
+                    {"Rule", "\<\"\[ForAll]E\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], 
+                    True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {
+                    "Goal", "\<\"h_3 : h \[RightArrow] h_1 \[RightArrow] \
+h_2\"\>"},
+                    {"ID", "3"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h\"\>"},
+                    {"ID", "5"},
+                    {"Rule", "\<\"and.left\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}], True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_4 : h \[And] h_1\"\>"},
+                    {"ID", "4"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}]}, Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]},
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_1\"\>"},
+                    {"ID", "6"},
+                    {"Rule", "\<\"and.right\"\>"},
+                    {"Proofs", 
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}], True->GridBox[{
+                    {
+                    OpenerBox[Dynamic[Typeset`var$$],
+                    Appearance->Automatic,
+                    AutoAction->False,
+                    ContinuousAction->False,
+                    Enabled->Automatic], "Arguments"},
+                    {"", 
+                    PaneBox[
+                    TagBox[GridBox[{
+                    {
+                    TagBox[GridBox[{
+                    {"Goal", "\<\"h_4 : h \[And] h_1\"\>"},
+                    {"ID", "4"},
+                    {"Rule", "Assumption"}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}]}, Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}]}, Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 
+                    5}, {Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 
+                    6}, {Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                    Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+                    Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_2"}, {$CellContext`ID, 
+                    7}, {Rule, "\[ForAll]E"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 
+                    5}, {Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 
+                    6}, {Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                    Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{
+                    0.5}}}]}, Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 8}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_2"}, {$CellContext`ID, 7}, {
+                    Rule, "\[ForAll]E"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 
+                    5}, {Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 
+                    6}, {Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}]}, Dynamic[Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, "h_2 : Prop"}, {$CellContext`ID,
+                     2}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    Grid[{{$CellContext`Goal, 
+                    "(h \[RightArrow] h_1 \[RightArrow] h_2) \[RightArrow] h \
+\[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 9}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 8}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_2"}, {$CellContext`ID, 7}, {
+                    Rule, "\[ForAll]E"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 5}, {
+                    Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 6}, {
+                    Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 
+                    4}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                    },
+                    AutoDelete->False,
+                    GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                    
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                    "Grid"]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                    "Column"],
+                    ImageMargins->0]}
+                    },
+                    AutoDelete->False,
+                    BaselinePosition->{1, 1},
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    GridBoxBackground->{"Columns" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, Dynamic[
+                    Typeset`var$$],
+                    Alignment->Automatic,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    DefaultBaseStyle->"OpenerView",
+                    ImageMargins->0,
+                    ImageSize->Automatic],
+                    Deployed->False,
+                    StripOnInput->False],
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, "h_1 : Prop"}, {$CellContext`ID,
+                     1}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "\[ForAll] (h_2 : Prop), (h \[RightArrow] h_1 \
+\[RightArrow] h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 10}, {Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, "h_2 : Prop"}, {$CellContext`ID,
+                     2}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "(h \[RightArrow] h_1 \[RightArrow] h_2) \[RightArrow] h \
+\[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 9}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 8}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_2"}, {$CellContext`ID, 7}, {
+                    Rule, "\[ForAll]E"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 5}, {
+                    Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 6}, {
+                    Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+                    DynamicModuleValues:>Automatic],
+                    Setting[#, {0}]& ]}
+                   },
+                   AutoDelete->False,
+                   GridBoxBackground->{"Columns" -> {
+                    RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+                   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+                   
+                   GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Grid"]}
+               },
+               DefaultBaseStyle->"Column",
+               GridBoxAlignment->{"Columns" -> {{Left}}},
+               
+               GridBoxItemSize->{
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+              "Column"],
+             ImageMargins->0]}
+          },
+          AutoDelete->False,
+          BaselinePosition->{1, 1},
+          GridBoxAlignment->{"Columns" -> {{Left}}},
+          GridBoxBackground->{"Columns" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+         Dynamic[Typeset`var$$],
+         Alignment->Automatic,
+         BaseStyle->{},
+         BaselinePosition->Baseline,
+         DefaultBaseStyle->"OpenerView",
+         ImageMargins->0,
+         ImageSize->Automatic],
+        Deployed->False,
+        StripOnInput->False],
+       OpenerView[{$CellContext`Arguments, 
+         Column[{
+           
+           Grid[{{$CellContext`Goal, "h : Prop"}, {$CellContext`ID, 0}, {
+             Rule, $CellContext`Assumption}}, Background -> {{
+               RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+           Grid[{{$CellContext`Goal, 
+              "\[ForAll] (h_1 h_2 : Prop), (h \[RightArrow] h_1 \[RightArrow] \
+h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 11}, {
+             Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+              OpenerView[{$CellContext`Arguments, 
+                Column[{
+                  
+                  Grid[{{$CellContext`Goal, "h_1 : Prop"}, {$CellContext`ID, 
+                    1}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                  
+                  Grid[{{$CellContext`Goal, 
+                    "\[ForAll] (h_2 : Prop), (h \[RightArrow] h_1 \
+\[RightArrow] h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 10}, {Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, "h_2 : Prop"}, {$CellContext`ID,
+                     2}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "(h \[RightArrow] h_1 \[RightArrow] h_2) \[RightArrow] h \
+\[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 9}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 8}, {
+                    Rule, "\[ForAll]I"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_2"}, {$CellContext`ID, 7}, {
+                    Rule, "\[ForAll]E"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_3 : h \[RightArrow] h_1 \[RightArrow] h_2"}, \
+{$CellContext`ID, 3}, {Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h"}, {$CellContext`ID, 5}, {
+                    Rule, "and.left"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All], 
+                    
+                    Grid[{{$CellContext`Goal, "h_1"}, {$CellContext`ID, 6}, {
+                    Rule, "and.right"}, {$CellContext`Proofs, 
+                    OpenerView[{$CellContext`Arguments, 
+                    Column[{
+                    
+                    Grid[{{$CellContext`Goal, 
+                    "h_4 : h \[And] h_1"}, {$CellContext`ID, 4}, {
+                    Rule, $CellContext`Assumption}}, Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                    Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+                   Background -> {{
+                    RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}]}}, 
+            Background -> {{
+               RGBColor[0.87, 0.94, 1]}, None}, Frame -> All]}]}, False]],
+      DynamicModuleValues:>{}],
+     Setting[#, {0}]& ]}
+  },
+  AutoDelete->False,
+  GridBoxBackground->{"Columns" -> {
+      RGBColor[0.87, 0.94, 1]}, "Rows" -> {{None}}},
+  GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+  GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+ "Grid"]], "Output",
+ CellChangeTimes->{3.8052735617291937`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"0e5e0cf1-6e57-4390-a9f4-c6afe30c5f0c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RunLeanTactic", "[", 
+  RowBox[{"Lean", ",", 
+   RowBox[{"ForAllTyped", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", ",", "q", ",", "r"}], "}"}], ",", "Prop", ",", 
+     RowBox[{"Implies", "[", 
+      RowBox[{
+       RowBox[{"Implies", "[", 
+        RowBox[{"p", ",", 
+         RowBox[{"Implies", "[", 
+          RowBox[{"q", ",", "r"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{
+         RowBox[{"And", "[", 
+          RowBox[{"p", ",", "q"}], "]"}], ",", "r"}], "]"}]}], "]"}]}], "]"}],
+    ",", "\"\<print_translation\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.805273019668552*^9, 3.805273046602586*^9}, {
+  3.8052731209191217`*^9, 3.805273128506444*^9}, {3.805273262193851*^9, 
+  3.805273275084464*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
+
+Cell[BoxData["\<\"\[ForAll] (p q r : Prop), (p \[RightArrow] q \[RightArrow] \
+r) \[RightArrow] p \[And] q \[RightArrow] r\\n\"\>"], "Output",
+ CellChangeTimes->{3.805273564640039*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"76eef0c4-ae40-486d-9027-10e1377a906b"]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{"QuitLeanMode", "[", "Lean", "]"}]], "Input",
  CellChangeTimes->{{3.805179392379258*^9, 3.805179393602859*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
+ CellLabel->"In[12]:=",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
 },
 WindowSize->{1850, 1016},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -18844,37 +19972,41 @@ Cell[1520, 50, 703, 11, 31, "Input",ExpressionUUID->"0e600f33-c4d8-43ae-953b-416
 Cell[2226, 63, 220, 4, 31, "Input",ExpressionUUID->"3d3c020a-c399-4ac9-850b-6a200b89dac3"],
 Cell[CellGroupData[{
 Cell[2471, 71, 676, 10, 31, "Input",ExpressionUUID->"bff7d237-7b23-4503-8ea8-a38367ef8b1f"],
-Cell[3150, 83, 7831, 165, 67, "Output",ExpressionUUID->"708e5987-f85f-4800-911c-b2bc979668f2"]
+Cell[3150, 83, 7871, 165, 67, "Output",ExpressionUUID->"db702086-ae9b-44ef-b34f-c10caf0312f9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11018, 253, 213, 3, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
-Cell[11234, 258, 795, 11, 35, "Output",ExpressionUUID->"f122cd65-939e-426e-b7d2-ca6552308f32"]
+Cell[11058, 253, 213, 3, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
+Cell[11274, 258, 795, 11, 35, "Output",ExpressionUUID->"f122cd65-939e-426e-b7d2-ca6552308f32"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12066, 274, 776, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
-Cell[12845, 290, 125047, 2664, 104, "Output",ExpressionUUID->"b1f21e33-0a53-4b2d-822e-fdaff29b11ed"]
+Cell[12106, 274, 776, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
+Cell[12885, 290, 125069, 2664, 104, "Output",ExpressionUUID->"83cf5bec-d936-423f-bb62-692dc0da71e3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[137929, 2959, 379, 7, 31, "Input",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
-Cell[138311, 2968, 168929, 3585, 104, "Output",ExpressionUUID->"a36153a6-cd36-4846-885d-8e571bed9bc8"]
+Cell[137991, 2959, 378, 7, 31, "Input",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
+Cell[138372, 2968, 168950, 3585, 104, "Output",ExpressionUUID->"5cbbfc68-1c30-445b-9797-bcbe67baf0bd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[307277, 6558, 470, 8, 31, "Input",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
-Cell[307750, 6568, 187936, 3997, 104, "Output",ExpressionUUID->"13e59c45-4757-476e-983e-84757e97814b"]
+Cell[307359, 6558, 469, 8, 31, "Input",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
+Cell[307831, 6568, 187912, 3997, 104, "Output",ExpressionUUID->"1e503838-2bca-4930-8ca0-350c9ef12bb2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[495723, 10570, 313, 5, 31, "Input",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
-Cell[496039, 10577, 63815, 1389, 104, "Output",ExpressionUUID->"c2d39942-9deb-4980-b9d4-c1c20e9aa783"]
+Cell[495780, 10570, 312, 5, 31, "Input",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
+Cell[496095, 10577, 63790, 1389, 104, "Output",ExpressionUUID->"c9778f9f-96a8-42aa-a9f5-f1db91c81920"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[559891, 11971, 309, 5, 31, "Input",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
-Cell[560203, 11978, 328334, 6797, 104, "Output",ExpressionUUID->"9a00b9f4-2ddc-4560-b253-2d97da6baa56"]
+Cell[559922, 11971, 308, 5, 31, "Input",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
+Cell[560233, 11978, 328311, 6797, 104, "Output",ExpressionUUID->"15d25bef-4484-4b49-a369-b8e1f64adf93"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[888574, 18780, 1293, 27, 31, "Input",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
-Cell[889870, 18809, 418, 6, 59, "Output",ExpressionUUID->"a049e2b0-c4d8-4b64-ad0d-b21d211fe1c9"]
+Cell[888581, 18780, 1360, 27, 31, "Input",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
+Cell[889944, 18809, 51586, 1103, 104, "Output",ExpressionUUID->"0e5e0cf1-6e57-4390-a9f4-c6afe30c5f0c"]
 }, Open  ]],
-Cell[890303, 18818, 212, 3, 31, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
+Cell[CellGroupData[{
+Cell[941567, 19917, 855, 21, 31, "Input",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
+Cell[942425, 19940, 263, 3, 59, "Output",ExpressionUUID->"76eef0c4-ae40-486d-9027-10e1377a906b"]
+}, Open  ]],
+Cell[942703, 19946, 213, 3, 64, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
 }
 ]
 *)
