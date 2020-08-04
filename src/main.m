@@ -53,6 +53,12 @@ GetLeanProof[p_ProcessObject, name_String] :=
 	       SendToLeanServer[p, content // ToString];
 	       res = HandleLeanServerResponse[p]; ("text" /. res[[1]]) // ToExpression];
 
+GetLeanInfo[p_ProcessObject, name_String] :=
+	Module[{res, content},
+	       content = StringForm["import main imports set_option pp.beta true open tactic.interactive #view_info ``", name];
+	       SendToLeanServer[p, content // ToString];
+	       res = HandleLeanServerResponse[p]; ("text" /. res[[1]]) // ToExpression];
+
 ProveUsingLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ] :=
 	Module[{res, content},
 	       content = StringForm["import main run_cmd prove_using_tac_with_grid_view (`1`) \\\"`2`\\\" `3` >>= tactic.trace",t,x // OutputFormat, If[b, "tt", "ff"]];

@@ -2,7 +2,7 @@ import .utils
 
 open tactic expr
 
-meta def is_conj (e : expr) : tactic bool :=
+meta def is_conj' (e : expr) : tactic bool :=
 do t ← infer_type e, return $ is_app_of t `and
 
 meta def add_facts (prf : expr) : tactic unit :=
@@ -11,7 +11,7 @@ t ← infer_type prf,
 assertv n t prf >> return ()
 
 meta def split_conjs_at : expr → tactic unit | e :=
-do b ← is_conj e,
+do b ← is_conj' e,
 if b then do e₁ ← mk_app `and.left [e],
              e₂ ← mk_app `and.right [e],
              add_facts e₁ >> add_facts e₂,
