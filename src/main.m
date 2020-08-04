@@ -67,13 +67,13 @@ ProveUsingLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ] :=
 
 ProveUsingLeanTactic[p_,x_,t_] := ProveUsingLeanTactic[p,x,t,False]
 
-RunLeanTactic[p_ProcessObject, x_, t_String, i_?StringQ] :=
+RunLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ] :=
 	Module[{res, content},
-	       content = StringForm["import main `1` run_cmd `2` \\\"`3`\\\" >>= tactic.trace",i,t,x // OutputFormat];
+	       content = StringForm["import main run_cmd `1` \\\"`2`\\\" >>= tactic.trace",t,x // OutputFormat];
 	       SendToLeanServer[p, content // ToString];
-	       res = HandleLeanServerResponse[p];("text" /. res[[1]])];
+	       res = HandleLeanServerResponse[p]; If[b, ("text" /. res[[1]]) // ToExpression, ("text" /. res[[1]])]];
 
-RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,""]
+RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,False]
 
 (* RunLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ, i_?StringQ] := *)
 (* 	Module[{res, content}, *)

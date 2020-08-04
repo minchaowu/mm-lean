@@ -101,4 +101,6 @@ do e ← preprocess mm_fml,
 
 
 meta def print_translation (mm_fml : string) (b := ff) : tactic string :=
-do e ← preprocess mm_fml >>= pp, return e.to_string
+do e ← preprocess mm_fml, 
+   pe ← pp e,
+   return $ "Grid[{{\"Lean native\"," ++ (mm_stringfy $ to_string pe) ++ "}, {\"Mathematica form\", OpenerView[{Text," ++ form_of_expr e ++ "// InputForm" ++ "}]" ++ "}}, Background -> {{LightGray}, None}, Frame -> All]"
