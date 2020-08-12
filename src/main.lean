@@ -34,7 +34,7 @@ meta def mm_check : expr → tactic unit :=
 meta def mm_write (s : name) (b := ff) : tactic unit :=
 get_decl s >>= λ e, write_string $ cond b e.value.to_string (form_of_expr e.value)
 
-meta def mm_prover : tactic unit := intuit <|> glivenko <|> pl_prover <|> `[finish]
+meta def mm_prover : tactic unit := intros >> (intuit <|> glivenko <|> pl_prover <|> `[finish])
 
 /--
  Solve goal using mm_prover and unfold listed constants in the resulting proof
