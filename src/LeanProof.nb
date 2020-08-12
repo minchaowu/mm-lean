@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    958633,      20305]
-NotebookOptionsPosition[    955576,      20247]
-NotebookOutlinePosition[    955910,      20262]
-CellTagsIndexPosition[    955867,      20259]
+NotebookDataLength[    985972,      20969]
+NotebookOptionsPosition[    982024,      20897]
+NotebookOutlinePosition[    982358,      20912]
+CellTagsIndexPosition[    982315,      20909]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -108,7 +108,7 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["28138", "SummaryItem"]}]}}, 
+                 TagBox["17511", "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -140,11 +140,11 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["28138", "SummaryItem"]}]}, {
+                 TagBox["17511", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["27921", "SummaryItem"]}]}, {
+                 TagBox["17292", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"User: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -161,7 +161,7 @@ Cell[BoxData[
                  TagBox[
                   
                   TemplateBox[{
-                   "8.384512`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
+                   "8.368128`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
@@ -172,7 +172,7 @@ Cell[BoxData[
                  "\[InvisibleSpace]", 
                  TagBox[
                   TemplateBox[{
-                    RowBox[{"\"Wed 2 Sep 2020 19:57:28\"", 
+                    RowBox[{"\"Tue 18 Aug 2020 09:40:51\"", 
                     StyleBox[
                     RowBox[{"\"GMT+\"", "\[InvisibleSpace]", 
                     StyleBox[
@@ -183,8 +183,8 @@ Cell[BoxData[
                     RowBox[{"{", 
                     
                     RowBox[{
-                    "2020", ",", "9", ",", "2", ",", "19", ",", "57", ",", 
-                    "28.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
+                    "2020", ",", "8", ",", "18", ",", "9", ",", "40", ",", 
+                    "51.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
                      ",", "10.`"}], "]"}]}, "DateObject", Editable -> False], 
                   "SummaryItem"]}]}, {
                RowBox[{
@@ -207,7 +207,7 @@ Cell[BoxData[
                  TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
-                  TemplateBox[{"4", "38", "26.`5.", 
+                  TemplateBox[{"14", "37", "37.`5.", 
                     RowBox[{"\[ThinSpace]", "\"h\""}], 
                     RowBox[{"\[ThinSpace]", "\"min\""}], 
                     RowBox[{"\[ThinSpace]", "\"s\""}], 
@@ -234,9 +234,9 @@ Cell[BoxData[
     DynamicModuleValues:>{}], "]"}],
   ProcessObject[
    Association[
-   "ManagedProcess" -> True, "UID" -> 0, "PID" -> 28138, "PPID" -> 27921, 
+   "ManagedProcess" -> True, "UID" -> 0, "PID" -> 17511, "PPID" -> 17292, 
     "Program" -> "lean", "Path" -> "/home/minchao/.elan/bin/lean", "User" -> 
-    "minchao", "StartTime" -> 1599040648]],
+    "minchao", "StartTime" -> 1597707651]],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
@@ -246,8 +246,9 @@ Cell[BoxData[
   3.8051815659010677`*^9, 3.805181897388094*^9, 3.805183098957262*^9, 
   3.805183639065048*^9, 3.805183903403364*^9, 3.805184489149942*^9, 
   3.805184743435124*^9, 3.8052730138742743`*^9, 3.805273519701531*^9, 
-  3.805524899640239*^9, 3.805540554324759*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"f2164c1e-fcd1-43b7-94e6-29b946b5490d"]
+  3.805524899640239*^9, 3.805540554324759*^9, 3.806230192367989*^9, 
+  3.806230708684225*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"d8243aed-ace5-4ed9-87a5-5ab5a4f2bfab"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -267,8 +268,8 @@ Cell[BoxData["\<\"Running\"\>"], "Output",
   3.8051792690120687`*^9, 3.805179369765088*^9, 3.805179422330134*^9, 
   3.805179930130145*^9, 3.8051800487726583`*^9, 3.805180140271229*^9, 
   3.805181567002911*^9, 3.80518189872655*^9, 3.805183100324609*^9, 
-  3.805183640525934*^9, 3.805184745055553*^9},
- CellLabel->"Out[5]=",ExpressionUUID->"f122cd65-939e-426e-b7d2-ca6552308f32"]
+  3.805183640525934*^9, 3.805184745055553*^9, 3.806230710045763*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"0b3313e4-9890-46d4-9c6d-8fe2ed1094c0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -10647,8 +10648,91 @@ Cell[BoxData[
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Grid"]], "Output",
  CellChangeTimes->{{3.80554058715197*^9, 3.805540648431563*^9}, 
-   3.805540681219324*^9},
+   3.805540681219324*^9, {3.8062307512503242`*^9, 3.806230752196447*^9}},
  CellLabel->"Out[8]=",ExpressionUUID->"fec74b07-381a-4bdc-9b21-008f2409cca1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GetLeanInfo", "[", 
+  RowBox[{"Lean", ",", " ", "\"\<nat.exists_infinite_primes\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.806230765916827*^9, 3.806230774057991*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"7d6c7b11-bf9e-4adc-af49-3b38e73da4a2"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"Category", "Theorem"},
+    {"Type", "\<\"\[ForAll] (n : \:2115), \[Exists] (p : \:2115), n \
+\[LessEqual] p \[And] nat.prime p\"\>"},
+    {"Description", 
+     TagBox[
+      DynamicModuleBox[{Typeset`var$$ = False}, 
+       InterpretationBox[
+        StyleBox[
+         PaneSelectorBox[{False->GridBox[{
+            {
+             OpenerBox[Dynamic[Typeset`var$$],
+              Appearance->Automatic,
+              AutoAction->False,
+              ContinuousAction->False,
+              Enabled->Automatic], "Documentation"}
+           },
+           AutoDelete->False,
+           BaselinePosition->{1, 1},
+           GridBoxAlignment->{"Columns" -> {{Left}}},
+           GridBoxBackground->{"Columns" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], True->
+          GridBox[{
+            {
+             OpenerBox[Dynamic[Typeset`var$$],
+              Appearance->Automatic,
+              AutoAction->False,
+              ContinuousAction->False,
+              Enabled->Automatic], "Documentation"},
+            {"", 
+             
+             PaneBox["\<\" Euclid's theorem. There exist infinitely many \
+prime numbers.\\nHere given in the form: for every `n`, there exists a prime \
+number `p \[GreaterEqual] n`.\"\>",
+              ImageMargins->0]}
+           },
+           AutoDelete->False,
+           BaselinePosition->{1, 1},
+           GridBoxAlignment->{"Columns" -> {{Left}}},
+           GridBoxBackground->{"Columns" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+          Dynamic[Typeset`var$$],
+          Alignment->Automatic,
+          BaseStyle->{},
+          BaselinePosition->Baseline,
+          DefaultBaseStyle->"OpenerView",
+          ImageMargins->0,
+          ImageSize->Automatic],
+         Deployed->False,
+         StripOnInput->False],
+        OpenerView[{$CellContext`Documentation, 
+          " Euclid's theorem. There exist infinitely many prime numbers.\n\
+Here given in the form: for every `n`, there exists a prime number `p \
+\[GreaterEqual] n`."}, False]],
+       DynamicModuleValues:>{}],
+      Setting[#, {0}]& ]}
+   },
+   AutoDelete->False,
+   GridBoxBackground->{"Columns" -> {
+       GrayLevel[0.85]}, "Rows" -> {{None}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.806230777018141*^9, 3.806230782915298*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"cef51a27-603d-4261-9bf6-d926a3a90563"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -18890,7 +18974,7 @@ Cell[BoxData[
   3.805183340998559*^9}, {3.805183938935348*^9, 3.805183940855002*^9}, {
   3.805184495996064*^9, 3.805184509567741*^9}, {3.805184749019628*^9, 
   3.8051847758541203`*^9}, {3.8052735027431707`*^9, 3.805273507022134*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
+ CellLabel->"In[11]:=",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -19994,8 +20078,8 @@ h_2) \[RightArrow] h \[And] h_1 \[RightArrow] h_2"}, {$CellContext`ID, 11}, {
   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
  "Grid"]], "Output",
- CellChangeTimes->{3.8052735617291937`*^9},
- CellLabel->"Out[10]=",ExpressionUUID->"0e5e0cf1-6e57-4390-a9f4-c6afe30c5f0c"]
+ CellChangeTimes->{3.8052735617291937`*^9, 3.806230735282114*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"1a3b8dd7-f1c6-430e-a497-e800150be402"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -20021,7 +20105,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.805273019668552*^9, 3.805273046602586*^9}, {
   3.8052731209191217`*^9, 3.805273128506444*^9}, {3.805273262193851*^9, 
   3.805273275084464*^9}, {3.805540558446203*^9, 3.8055405599493732`*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
+ CellLabel->"In[10]:=",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -20236,8 +20320,574 @@ $CellContext`LeanLevelListNil],
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Grid"]], "Output",
  CellChangeTimes->{
-  3.805273564640039*^9, {3.805540561573024*^9, 3.805540573427721*^9}},
- CellLabel->"Out[5]=",ExpressionUUID->"1dbda5bc-2707-4359-b9e4-47f891f82af6"]
+  3.805273564640039*^9, {3.805540561573024*^9, 3.805540573427721*^9}, {
+   3.806230729176538*^9, 3.8062307332719*^9}},
+ CellLabel->"Out[10]=",ExpressionUUID->"dacf5938-4831-4c3e-9609-133665f584b5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", 
+  "\"\<../_target/deps/mathematica/src/lean_form.m\>\""}]], "Input",
+ CellChangeTimes->{{3.716562188206143*^9, 3.71656220354294*^9}, {
+   3.716657046744205*^9, 3.716657047344171*^9}, {3.716658439872884*^9, 
+   3.716658443191935*^9}, {3.7583557921274242`*^9, 3.758355803747884*^9}, {
+   3.758356198488882*^9, 3.7583562184424343`*^9}, {3.758356405477998*^9, 
+   3.758356446604084*^9}, 3.758356596741905*^9, {3.758356634827507*^9, 
+   3.758356635616549*^9}, {3.758356937628787*^9, 3.758356965047028*^9}, {
+   3.758357014518546*^9, 3.7583570215232697`*^9}, {3.758357302376919*^9, 
+   3.758357307360552*^9}, {3.758358091307436*^9, 3.758358093806889*^9}, {
+   3.75840543120122*^9, 3.758405432289085*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"96df7dc0-0d81-4619-af8b-2e39fb6f869c"],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<natural_deduction_graphs.wl\>\""}]], "Input",
+ CellChangeTimes->{{3.7166570644967527`*^9, 3.716657083663563*^9}, {
+  3.7166580372531137`*^9, 3.7166580442448807`*^9}, {3.716659964237204*^9, 
+  3.716659964437479*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"7296ff3c-3f52-4327-9d49-8e85c90f92c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiagramOfFormula", "[", 
+  RowBox[{"Lean", ",", 
+   RowBox[{"ForAll", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"P", ",", "Q"}], "}"}], ",", 
+     RowBox[{"Implies", "[", 
+      RowBox[{"P", ",", 
+       RowBox[{"Or", "[", 
+        RowBox[{
+         RowBox[{"Not", "[", "Q", "]"}], ",", "P"}], "]"}]}], "]"}]}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"P", ",", "Q"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.758357555057588*^9, 3.758357585307502*^9}, {
+  3.758357752301716*^9, 3.758357773405452*^9}, {3.8062290024386063`*^9, 
+  3.806229010459382*^9}, {3.806229600363234*^9, 3.806229602475047*^9}, {
+  3.806229755927445*^9, 3.8062297570653763`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"beece667-a5ed-49e1-b11a-3a614ab13676"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{10, 11, 12}, {{{1, 2}, {2, 3}}, Null}, {EdgeShapeFunction -> {{
+          Arrowheads[{{Medium, 0.55}}], 
+          Arrow[#]}& }, EdgeStyle -> {
+         GrayLevel[0, 0.3]}, GraphLayout -> {"Dimension" -> 2}, 
+       VertexLabels -> {12 -> Placed[
+           Column[{
+             Style["\[Implies]I  [a]", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Implies[$CellContext`P, 
+                HoldForm[
+                 Or[
+                  HoldForm[
+                   Not[$CellContext`Q]], $CellContext`P]]]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 11 -> Placed[
+           Column[{
+             Style["\[Or]IR", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Or[
+                HoldForm[
+                 Not[$CellContext`Q]], $CellContext`P]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 10 -> Placed[
+           Column[{
+             Style["Hyp: a", 12, FontColor -> GrayLevel[0.3]], 
+             Style[$CellContext`P, 16, FontFamily -> "Times"]}, Frame -> All, 
+            Alignment -> Center, FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0], Opacity[0.3], 
+        {Arrowheads[{{Medium, 0.55}}], 
+         ArrowBox[{{0., 3.6739403974420594`*^-16}, {1., 
+          2.4492935982947064`*^-16}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], 
+         ArrowBox[{{1., 2.4492935982947064`*^-16}, {2., 0.}}]}}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{0., 3.6739403974420594*^-16}, 0.02261146496815286], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"Hyp: a\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox["P",
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {0., 3.6739403974420594*^-16},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{1., 2.4492935982947064*^-16}, 0.02261146496815286], InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Or]IR\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{
+                RowBox[{"\[Not]", "Q"}], "\[Or]", "P"}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {1., 2.4492935982947064*^-16},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 0.}, 0.02261146496815286], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Implies]I  [a]\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{"P", "\[Implies]", 
+                RowBox[{
+                 RowBox[{"\[Not]", "Q"}], "\[Or]", "P"}]}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 0.},
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{3.806230347993849*^9, 3.806230720782403*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"fce3a073-b4b9-4463-b888-ef3bec2d8fcc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiagramOfFormula", "[", 
+  RowBox[{"Lean", ",", 
+   RowBox[{"ForAllTyped", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", ",", "q", ",", "r"}], "}"}], ",", "Prop", ",", 
+     RowBox[{"Implies", "[", 
+      RowBox[{
+       RowBox[{"Implies", "[", 
+        RowBox[{"p", ",", 
+         RowBox[{"Implies", "[", 
+          RowBox[{"q", ",", "r"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{
+         RowBox[{"And", "[", 
+          RowBox[{"p", ",", "q"}], "]"}], ",", "r"}], "]"}]}], "]"}]}], "]"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "q", ",", "r"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.806230602934257*^9, 3.806230603290223*^9}, {
+  3.806230665253668*^9, 3.806230667552019*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"565fc1e2-86cc-49c2-ab9f-5aaf01d47489"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 
+      9}, {{{1, 4}, {2, 3}, {3, 4}, {5, 6}, {4, 7}, {6, 7}, {7, 8}, {8, 9}}, 
+       Null}, {EdgeShapeFunction -> {{
+          Arrowheads[{{Medium, 0.55}}], 
+          Arrow[#]}& }, EdgeStyle -> {
+         GrayLevel[0, 0.3]}, GraphLayout -> {"Dimension" -> 2}, 
+       VertexLabels -> {6 -> Placed[
+           Column[{
+             Style["\[And]ER", 12, FontColor -> GrayLevel[0.3]], 
+             Style[$CellContext`q, 16, FontFamily -> "Times"]}, Frame -> All, 
+            Alignment -> Center, FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 3 -> Placed[
+           Column[{
+             Style["\[And]EL", 12, FontColor -> GrayLevel[0.3]], 
+             Style[$CellContext`p, 16, FontFamily -> "Times"]}, Frame -> All, 
+            Alignment -> Center, FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 5 -> Placed[
+           Column[{
+             Style["Hyp: a1", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               And[$CellContext`p, $CellContext`q]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 8 -> Placed[
+           Column[{
+             Style["\[Implies]I  [a1]", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Implies[
+                HoldForm[
+                 And[$CellContext`p, $CellContext`q]], $CellContext`r]], 16, 
+              FontFamily -> "Times"]}, Frame -> All, Alignment -> Center, 
+            FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 7 -> Placed[
+           Column[{
+             Style["\[Implies]E", 12, FontColor -> GrayLevel[0.3]], 
+             Style[$CellContext`r, 16, FontFamily -> "Times"]}, Frame -> All, 
+            Alignment -> Center, FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 9 -> Placed[
+           Column[{
+             Style["\[Implies]I  [a]", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Implies[
+                HoldForm[
+                 Implies[$CellContext`p, 
+                  HoldForm[
+                   Implies[$CellContext`q, $CellContext`r]]]], 
+                HoldForm[
+                 Implies[
+                  HoldForm[
+                   And[$CellContext`p, $CellContext`q]], $CellContext`r]]]], 
+              16, FontFamily -> "Times"]}, Frame -> All, Alignment -> Center, 
+            FrameStyle -> GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 4 -> Placed[
+           Column[{
+             Style["\[Implies]E", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Implies[$CellContext`q, $CellContext`r]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 2 -> Placed[
+           Column[{
+             Style["Hyp: a1", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               And[$CellContext`p, $CellContext`q]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center], 1 -> Placed[
+           Column[{
+             Style["Hyp: a", 12, FontColor -> GrayLevel[0.3]], 
+             Style[
+              HoldForm[
+               Implies[$CellContext`p, 
+                HoldForm[
+                 Implies[$CellContext`q, $CellContext`r]]]], 16, FontFamily -> 
+              "Times"]}, Frame -> All, Alignment -> Center, FrameStyle -> 
+            GrayLevel[0.7], Background -> {{
+               GrayLevel[0.95], 
+               GrayLevel[0.9]}}], Center]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0], Opacity[0.3], 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{0., 4.}, {1., 3.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{1., 5.}, {1., 4.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{1., 4.}, {1., 3.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{1., 3.}, {2., 2.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{2., 4.}, {2., 3.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{2., 3.}, {2., 2.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{2., 2.}, {2., 1.}}]}, 
+        {Arrowheads[{{Medium, 0.55}}], ArrowBox[{{2., 1.}, {2., 0.}}]}}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{0., 4.}, 0.043048128342245986], InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"Hyp: a\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{"p", "\[Implies]", 
+                RowBox[{"(", 
+                 RowBox[{"q", "\[Implies]", "r"}], ")"}]}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {0., 4.},
+          BaseStyle->"Graphics"]}, {DiskBox[{1., 5.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"Hyp: a1\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{"p", "\[And]", "q"}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {1., 5.},
+          BaseStyle->"Graphics"]}, {DiskBox[{1., 4.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[And]EL\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox["p",
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {1., 4.},
+          BaseStyle->"Graphics"]}, {DiskBox[{1., 3.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Implies]E\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{"q", "\[Implies]", "r"}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {1., 3.},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 4.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"Hyp: a1\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{"p", "\[And]", "q"}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 4.},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 3.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[And]ER\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox["q",
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 3.},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 2.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Implies]E\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox["r",
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 2.},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 1.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Implies]I  [a1]\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{
+                RowBox[{"p", "\[And]", "q"}], "\[Implies]", "r"}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 1.},
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 0.}, 0.043048128342245986], 
+         InsetBox[
+          TagBox[GridBox[{
+             {
+              StyleBox["\<\"\[Implies]I  [a]\"\>",
+               StripOnInput->False,
+               FontSize->12,
+               FontColor->GrayLevel[0.3]]},
+             {
+              StyleBox[
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"p", "\[Implies]", 
+                  RowBox[{"(", 
+                   RowBox[{"q", "\[Implies]", "r"}], ")"}]}], ")"}], 
+                "\[Implies]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"p", "\[And]", "q"}], "\[Implies]", "r"}], ")"}]}],
+               StripOnInput->False,
+               FontFamily->"Times",
+               FontSize->16]}
+            },
+            DefaultBaseStyle->"Column",
+            FrameStyle->GrayLevel[0.7],
+            GridBoxAlignment->{"Columns" -> {{Center}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+                 GrayLevel[0.95], 
+                 GrayLevel[0.9]}}},
+            GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Column"], {2., 0.},
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{3.806230717886972*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"202d10a5-ba80-4828-b11a-82dcd1a001d9"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -20268,45 +20918,59 @@ Cell[1520, 50, 703, 11, 31, "Input",ExpressionUUID->"0e600f33-c4d8-43ae-953b-416
 Cell[2226, 63, 220, 4, 31, "Input",ExpressionUUID->"3d3c020a-c399-4ac9-850b-6a200b89dac3"],
 Cell[CellGroupData[{
 Cell[2471, 71, 676, 10, 31, "Input",ExpressionUUID->"bff7d237-7b23-4503-8ea8-a38367ef8b1f"],
-Cell[3150, 83, 7922, 166, 67, "Output",ExpressionUUID->"f2164c1e-fcd1-43b7-94e6-29b946b5490d"]
+Cell[3150, 83, 7971, 167, 67, "Output",ExpressionUUID->"d8243aed-ace5-4ed9-87a5-5ab5a4f2bfab"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11109, 254, 213, 3, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
-Cell[11325, 259, 795, 11, 35, "Output",ExpressionUUID->"f122cd65-939e-426e-b7d2-ca6552308f32"]
+Cell[11158, 255, 213, 3, 31, "Input",ExpressionUUID->"a09aad19-bd35-49e2-b90b-28d31c8cc39d"],
+Cell[11374, 260, 817, 11, 35, "Output",ExpressionUUID->"0b3313e4-9890-46d4-9c6d-8fe2ed1094c0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12157, 275, 776, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
-Cell[12936, 291, 125069, 2664, 104, "Output",ExpressionUUID->"83cf5bec-d936-423f-bb62-692dc0da71e3"]
+Cell[12228, 276, 776, 14, 31, "Input",ExpressionUUID->"6eaa36ad-102d-410f-941e-29b4e97398c5"],
+Cell[13007, 292, 125069, 2664, 104, "Output",ExpressionUUID->"83cf5bec-d936-423f-bb62-692dc0da71e3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[138042, 2960, 378, 7, 31, "Input",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
-Cell[138423, 2969, 168950, 3585, 104, "Output",ExpressionUUID->"5cbbfc68-1c30-445b-9797-bcbe67baf0bd"]
+Cell[138113, 2961, 378, 7, 31, "Input",ExpressionUUID->"3739a398-32eb-40bf-9968-8ee78a5000ed"],
+Cell[138494, 2970, 168950, 3585, 104, "Output",ExpressionUUID->"5cbbfc68-1c30-445b-9797-bcbe67baf0bd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[307410, 6559, 469, 8, 31, "Input",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
-Cell[307882, 6569, 188010, 3999, 104, "Output",ExpressionUUID->"798e2a43-f265-42a2-a135-d9b7dfab1865"]
+Cell[307481, 6560, 469, 8, 31, "Input",ExpressionUUID->"5afad108-4531-4842-ad18-1537188da0e1"],
+Cell[307953, 6570, 188010, 3999, 104, "Output",ExpressionUUID->"798e2a43-f265-42a2-a135-d9b7dfab1865"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[495929, 10573, 361, 6, 31, "Input",ExpressionUUID->"277762b0-34d1-4446-ba72-c2e499f8e50b"],
-Cell[496293, 10581, 2588, 69, 84, "Output",ExpressionUUID->"fec74b07-381a-4bdc-9b21-008f2409cca1"]
+Cell[496000, 10574, 361, 6, 31, "Input",ExpressionUUID->"277762b0-34d1-4446-ba72-c2e499f8e50b"],
+Cell[496364, 10582, 2636, 69, 84, "Output",ExpressionUUID->"fec74b07-381a-4bdc-9b21-008f2409cca1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[498918, 10655, 312, 5, 31, "Input",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
-Cell[499233, 10662, 63790, 1389, 104, "Output",ExpressionUUID->"c9778f9f-96a8-42aa-a9f5-f1db91c81920"]
+Cell[499037, 10656, 276, 5, 31, "Input",ExpressionUUID->"7d6c7b11-bf9e-4adc-af49-3b38e73da4a2"],
+Cell[499316, 10663, 2812, 71, 85, "Output",ExpressionUUID->"cef51a27-603d-4261-9bf6-d926a3a90563"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[563060, 12056, 308, 5, 31, "Input",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
-Cell[563371, 12063, 328311, 6797, 104, "Output",ExpressionUUID->"15d25bef-4484-4b49-a369-b8e1f64adf93"]
+Cell[502165, 10739, 312, 5, 31, "Input",ExpressionUUID->"53c0faa5-8781-4294-8565-61bc9270e50b"],
+Cell[502480, 10746, 63790, 1389, 104, "Output",ExpressionUUID->"c9778f9f-96a8-42aa-a9f5-f1db91c81920"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[891719, 18865, 1360, 27, 31, "Input",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
-Cell[893082, 18894, 51586, 1103, 104, "Output",ExpressionUUID->"0e5e0cf1-6e57-4390-a9f4-c6afe30c5f0c"]
+Cell[566307, 12140, 308, 5, 31, "Input",ExpressionUUID->"54fc49ce-f26f-4fbc-ba8e-42b2489df1ef"],
+Cell[566618, 12147, 328311, 6797, 104, "Output",ExpressionUUID->"15d25bef-4484-4b49-a369-b8e1f64adf93"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[944705, 20002, 915, 21, 31, "Input",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
-Cell[945623, 20025, 9722, 214, 66, "Output",ExpressionUUID->"1dbda5bc-2707-4359-b9e4-47f891f82af6"]
+Cell[894966, 18949, 1360, 27, 31, "Input",ExpressionUUID->"e53294c3-0f29-4a93-8549-436b21e44ed8"],
+Cell[896329, 18978, 51608, 1103, 104, "Output",ExpressionUUID->"1a3b8dd7-f1c6-430e-a497-e800150be402"]
 }, Open  ]],
-Cell[955360, 20242, 212, 3, 64, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
+Cell[CellGroupData[{
+Cell[947974, 20086, 916, 21, 31, "Input",ExpressionUUID->"e44935c6-8cbe-4e38-87cf-2a2c9a640ade"],
+Cell[948893, 20109, 9771, 215, 66, "Output",ExpressionUUID->"dacf5938-4831-4c3e-9609-133665f584b5"]
+}, Open  ]],
+Cell[958679, 20327, 806, 12, 31, "Input",ExpressionUUID->"96df7dc0-0d81-4619-af8b-2e39fb6f869c"],
+Cell[959488, 20341, 327, 5, 31, "Input",ExpressionUUID->"7296ff3c-3f52-4327-9d49-8e85c90f92c6"],
+Cell[CellGroupData[{
+Cell[959840, 20350, 775, 19, 31, "Input",ExpressionUUID->"beece667-a5ed-49e1-b11a-3a614ab13676"],
+Cell[960618, 20371, 5594, 134, 60, "Output",ExpressionUUID->"fce3a073-b4b9-4463-b888-ef3bec2d8fcc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[966249, 20510, 841, 22, 31, "Input",ExpressionUUID->"565fc1e2-86cc-49c2-ab9f-5aaf01d47489"],
+Cell[967093, 20534, 14700, 355, 449, "Output",ExpressionUUID->"202d10a5-ba80-4828-b11a-82dcd1a001d9"]
+}, Open  ]],
+Cell[981808, 20892, 212, 3, 31, "Input",ExpressionUUID->"74feae36-5665-4e87-ae08-27945938bd89"]
 }
 ]
 *)

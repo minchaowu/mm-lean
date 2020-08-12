@@ -66,7 +66,7 @@ meta def prove_using_tac_with_grid_view (tac : tactic unit) (mm_fml : string) (b
     return $ if b then s else pf.to_string) 
 <|> return "failed"
 
-meta def prove_mm_prop_fml (mm_fml : string) (b := ff) : tactic string :=
+meta def prove_mm_prop_fml (mm_fml : string) (b := tt) : tactic string :=
 prove_using_tac (intros >> mm_prover_unfold ljt_lemmas) mm_fml b
 
 meta def mk_smt_simp_lemmas : tactic simp_lemmas :=
