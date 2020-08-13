@@ -101,7 +101,7 @@ meta def is_recursor : name → bool
 | _ := ff
 
 private meta def boring_consts : name_set :=
-name_set.of_list [`id_locked, `congr, `forall_congr_eq, `congr_arg, `propext, `forall_const, `eq_self_iff_true]
+name_set.of_list [`id_locked, `congr, `forall_congr_eq, `congr_arg, `propext, `forall_const, `eq_self_iff_true, `nonempty_of_inhabited]
 
 meta def is_boring : name → bool
 | (mk_string _ (mk_string "eq" _)) := tt
