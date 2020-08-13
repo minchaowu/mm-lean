@@ -16,9 +16,9 @@ OutputFormat[h_[args___]] :=
 
 (* ProveUsingLeanTactic[x_,t_,p_] := ProveUsingLeanTactic[x,t,p,False] *)
 
-ProveInteractively[e_] := Module[{s,t,cmd,ts}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; t=OpenWrite["interactive_temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd translate \"`1`\" >>= write_string",e // OutputFormat]; WriteString[s, "import main", "\n", cmd]; Close[s];RunThrough[p <> " temp.lean",0];ts=Import["temp.txt", CharacterEncoding -> "UTF8"]; cmd=StringForm["example : `1` := _", ts]; WriteString[t, cmd]; Close[t]; RunProcess[{"emacs","interactive_temp.lean"}];];
+(* ProveInteractively[e_] := Module[{s,t,cmd,ts}, s=OpenWrite["temp.lean", CharacterEncoding -> "UTF8"]; t=OpenWrite["interactive_temp.lean", CharacterEncoding -> "UTF8"]; cmd=StringForm["run_cmd translate \"`1`\" >>= write_string",e // OutputFormat]; WriteString[s, "import main", "\n", cmd]; Close[s];RunThrough[p <> " temp.lean",0];ts=Import["temp.txt", CharacterEncoding -> "UTF8"]; cmd=StringForm["example : `1` := _", ts]; WriteString[t, cmd]; Close[t]; RunProcess[{"emacs","interactive_temp.lean"}];]; *)
 
-SelectLeanPremises[e_] := RunLeanTactic[e, "find_relevant_facts", "premise_selection"]
+(* SelectLeanPremises[e_] := RunLeanTactic[e, "find_relevant_facts", "premise_selection"] *)
 
 SetAttributes[OutputFormat, HoldFirst];
 (* SetAttributes[ProveUsingLeanTactic, HoldFirst]; *)
@@ -75,6 +75,7 @@ RunLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ] :=
 
 RunLeanTactic[x_,t_,p_]:=RunLeanTactic[x,t,p,False]
 
+SelectLeanPremises[p_, e_] := RunLeanTactic[p, e, "find_relevant_facts", False]
 (* RunLeanTactic[p_ProcessObject, x_, t_String, b_?BooleanQ, i_?StringQ] := *)
 (* 	Module[{res, content}, *)
 (* 	       content = StringForm["import main `1` run_cmd `2` \\\"`3`\\\" `4` >>= tactic.trace",i,t,x // OutputFormat, If[b, "tt", "ff"]]; *)

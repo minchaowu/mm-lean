@@ -7,3 +7,4 @@ path = "src"
 [dependencies]
 mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "25d8d02ba9d91add2b8d7fdc588c9ebedf022990"}
 mathlib = {git = "https://github.com/leanprover-community/mathlib.git", rev = "f78a012d976ebf3f2a4694fa16cff1632ce0b57f"}
+relevance_filter = {git = "https://github.com/robertylewis/relevance_filter", rev = "603fedb34d43db83bfb3ac673544018b367b4e74"}

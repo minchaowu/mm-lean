@@ -4,8 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Author: Minchao Wu
 -/
 
-import system.io provers.ljt provers.tableaux mathematica lambda extract_consts grid_view
--- _target.deps.relevance_filter.k_nn
+import system.io provers.ljt provers.tableaux mathematica lambda extract_consts grid_view k_nn
 open tactic expr io mathematica name task mmexpr
 
 @[simp]
@@ -104,3 +103,9 @@ meta def print_translation (mm_fml : string) (b := ff) : tactic string :=
 do e ← preprocess mm_fml, 
    pe ← pp e,
    return $ "Grid[{{\"Lean native\"," ++ (mm_stringfy $ to_string pe) ++ "}, {\"Mathematica form\", OpenerView[{Text," ++ form_of_expr e ++ "// InputForm" ++ "}]" ++ "}}, Background -> {{LightGray}, None}, Frame -> All]"
+
+meta def find_relevant_facts (mm_fml : string) (b := ff) : tactic string :=
+do e ← preprocess mm_fml,
+   (contents_map, features_map, names) ← get_all_decls,
+   let relevant_facts := find_k_most_relevant_facts_to_expr e contents_map features_map names.snd 10,
+   relevant_facts.mmap (λ f, do tp ← mk_const f.1 >>= infer_type, return (f.1, tp)) >>= print_name_type_list
