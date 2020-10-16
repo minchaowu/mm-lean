@@ -1,10 +1,10 @@
 [package]
 name = "mm-lean"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.18.4"
+lean_version = "leanprover-community/lean:3.21.0"
 path = "src"
 
 [dependencies]
-mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "1324ab17aca442da09daec4fc3277420a0fb67bb"}
-mathlib = {git = "https://github.com/leanprover-community/mathlib.git", rev = "15cacf0ea137bb0ad9120a4489ead0cf13c0a81d"}
+mathematica = {git = "https://github.com/rlewis1988/mathematica", rev = "cad7fce7b68c7013f990a2cb47cb569029b65cd1"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib.git", rev = "cc14658a0ea2546b5b696f9ca8f9a98743119ba1"}
 relevance_filter = {git = "https://github.com/robertylewis/relevance_filter", rev = "d11544e08c6d3569410e312baf149412b168ebb4"}
